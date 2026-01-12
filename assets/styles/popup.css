@@ -39,11 +39,13 @@
 
 .popup-title {
   margin-top: 68px;
+  margin-bottom: 16px;
 }
 
 .popup-sub-title {
-  margin-top: 24px;
   font-weight: 400;
+  padding-top: 8px;
+  margin: 0 auto;
 }
 
 .orange-btn.has-left-icon::before {
@@ -57,8 +59,8 @@
 
 .blue-btn.has-left-icon::after {
   content: "";
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   background-image: url("/assets/images/right-blue-arrow.png");
   background-repeat: no-repeat;
   background-size: contain;

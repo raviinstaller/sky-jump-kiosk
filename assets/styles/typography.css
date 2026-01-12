@@ -155,12 +155,20 @@
   justify-content: space-between;
 }
 
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
 .gap-15 {
   gap: 15px;
 }
 
 .gap-20 {
   gap: 20px;
+}
+
+.gap-40 {
+  gap: 40px;
 }
 
 .mt-200 {
@@ -174,18 +182,25 @@
 .w-47-percent {
   max-width: 47.6%;
 }
+.w-full {
+  width: 100%;
+}
+
 .pt-24 {
   padding-top: 24px;
 }
+
 .pt-50 {
   padding-top: 50px;
 }
+
 .max-w-665 {
   max-width: 665px;
 }
 .max-w-838 {
   max-width: 838px;
 }
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;

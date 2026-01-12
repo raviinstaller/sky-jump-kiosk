@@ -16,7 +16,10 @@
   border-radius: 24px;
   flex-direction: column;
 }
-
+.club-box:hover {
+  border-color: var(--text-primary);
+  box-shadow: 0px 16px 40px 0px #00000040;
+}
 .club-box-img {
   size: 180px;
 }
