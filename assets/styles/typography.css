@@ -173,3 +173,8 @@
 .pt-24 {
   padding-top: 24px;
 }
+.max-w-665 {
+  max-width: 665px;
+  margin-left: auto;
+  margin-right: auto;
+}
