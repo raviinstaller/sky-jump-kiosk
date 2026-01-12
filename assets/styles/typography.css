@@ -170,6 +170,10 @@
 .w-32-percent {
   max-width: 32%;
 }
+
+.w-47-percent {
+  max-width: 47.6%;
+}
 .pt-24 {
   padding-top: 24px;
 }
@@ -178,8 +182,9 @@
 }
 .max-w-665 {
   max-width: 665px;
-  margin-left: auto;
-  margin-right: auto;
+}
+.max-w-838 {
+  max-width: 838px;
 }
 .mx-auto {
   margin-left: auto;
