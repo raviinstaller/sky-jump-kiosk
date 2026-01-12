@@ -155,6 +155,10 @@
   justify-content: space-between;
 }
 
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
 .gap-15 {
   gap: 15px;
 }
@@ -163,12 +167,20 @@
   gap: 20px;
 }
 
+.gap-40 {
+  gap: 40px;
+}
+
 .mt-200 {
   margin-top: 200px;
 }
 
 .w-32-percent {
   max-width: 32%;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .pt-24 {
