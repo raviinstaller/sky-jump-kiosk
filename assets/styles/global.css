@@ -116,3 +116,22 @@ body {
   justify-content: center;
   gap: 12px;
 }
+
+.white-btn {
+  padding: 30px 24px;
+  background-color: transparent;
+  border-color: var(--white-color);
+  color: var(--white-color);
+  flex-direction: row;
+  gap: 24px;
+  text-wrap-mode: nowrap;
+}
+
+.has-white-btn-left::after {
+  content: "";
+  width: 32px;
+  height: 32px;
+  background-image: url("/assets/images/right-white-arrow.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
