@@ -1,4 +1,3 @@
-/* Font size utilities */
 .text-base {
   font-size: var(--size-base);
   line-height: var(--line-height-base);
@@ -93,6 +92,10 @@
   color: var(--color-text-primary);
   font-weight: 700;
   text-align: center;
+}
+
+.font-assistant {
+  font-family: "Assistant", sans-serif;
 }
 
 /* Base text color */
