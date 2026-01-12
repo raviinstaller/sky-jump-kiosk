@@ -126,3 +126,30 @@
 .text-semibold {
   font-weight: 600;
 }
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.gap-15 {
+  gap: 15px;
+}
+.w-32-percent {
+  max-width: 32%;
+}

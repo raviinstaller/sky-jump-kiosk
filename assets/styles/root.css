@@ -1,9 +1,12 @@
 :root {
-  --color-primary: #FF9800;
+  --color-primary: #ff9800;
   --color-text-primary: #013d6c;
   --color-secondary: #0b4da2;
+  --color-red: #ff383c;
+  --color-red-bg: rgba(255, 0, 0, 0.2);
   --white-color: #ffffff;
   --size-base: 16px;
+  --size-sm: 20px;
   --size-md: 24px;
   --size-lg: 32px;
   --size-xl: 40px;
