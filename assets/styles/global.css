@@ -71,3 +71,48 @@ body {
   background-repeat: no-repeat;
   display: block;
 }
+
+.text-color-gradient {
+  background: linear-gradient(360deg, #001F2C 11.11%, #004C8C 40.56%, #00375F 79.17%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.orange-btn {
+  padding: 26px 60px;
+  background-color: var(--color-primary);
+  border-radius: 16px;
+  flex-direction: row-reverse;
+  color: var(--white-color);
+  text-align: center;
+  font-size: 44px;
+  font-weight: 700;
+  width: 100%;
+  border: none;
+  font-family: "Assistant", sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.blue-btn {
+  padding: 30px 63px 22px 55px;
+  border: 2px solid var(--color-text-primary);
+  flex-direction: row-reverse;
+  border-radius: 16px;
+  color: var(--color-secondary);
+  text-align: center;
+  background-color: var(--white-color);
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Assistant", sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
