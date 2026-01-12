@@ -1,0 +1,125 @@
+/* Font size utilities */
+.text-base {
+  font-size: var(--size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  font-weight: 700;
+  text-align: center;
+}
+
+.text-md {
+  font-size: var(--size-md);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  font-weight: 700;
+  text-align: center;
+}
+
+.text-lg {
+  font-size: var(--size-lg);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  font-weight: 700;
+  text-align: center;
+}
+
+.text-xl {
+  font-size: var(--size-xl);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  font-weight: 700;
+  text-align: center;
+}
+
+.text-2xl {
+  font-size: var(--size-2xl);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  font-weight: 700;
+  text-align: center;
+}
+
+.text-3xl {
+  font-size: var(--size-3xl);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  font-weight: 700;
+  text-align: center;
+}
+
+.text-4xl {
+  font-size: var(--size-4xl);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  font-weight: 700;
+  text-align: center;
+}
+
+.text-6xl {
+  font-size: var(--size-6xl);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  font-weight: 700;
+  text-align: center;
+}
+
+.text-7xl {
+  font-size: var(--size-7xl);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  font-weight: 700;
+  text-align: center;
+}
+
+.text-8xl {
+  font-size: var(--size-8xl);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  font-weight: 700;
+  text-align: center;
+}
+
+.text-9xl {
+  font-size: var(--size-9xl);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  font-weight: 700;
+  text-align: center;
+}
+
+.text-10xl {
+  font-size: var(--size-10xl);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Base text color */
+.text-white {
+  color: #ffffff;
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.text-normal {
+  font-weight: 400;
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+.text-semibold {
+  font-weight: 600;
+}

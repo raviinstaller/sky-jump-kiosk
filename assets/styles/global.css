@@ -1,0 +1,73 @@
+body {
+  background-image: url("../images/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #1ba2dd;
+  min-height: 100vh;
+  font-family: "Noto Sans Hebrew", sans-serif;
+}
+
+.main {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 50px;
+}
+
+.app-logo {
+  height: 268px;
+  width: 310px;
+  background-image: url("../images/logo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content-container {
+  border-radius: 16px;
+  padding: 32px;
+  background-color: var(--color-secondary);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.content-container-white {
+  background-color: #ffffff;
+}
+
+.content-container-total {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-number-button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 16px;
+  text-align: center;
+  font-size: var(--size-xl);
+  font-weight: 700;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.order-number-button::before {
+  content: "";
+  height: 52px;
+  width: 52px;
+  background-image: url("../images/check-icon-small.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+}

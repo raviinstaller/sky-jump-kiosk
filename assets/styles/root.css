@@ -1,0 +1,20 @@
+:root {
+  --color-secondary: #0b4da2;
+  --color-text-primary: #013d6c;
+
+  --size-base: 16px;
+  --size-md: 24px;
+  --size-lg: 32px;
+  --size-xl: 40px;
+  --size-2xl: 48px;
+  --size-3xl: 56px;
+  --size-4xl: 64px;
+  --size-6xl: 72px;
+  --size-7xl: 80px;
+  --size-8xl: 88px;
+  --size-9xl: 96px;
+  --size-10xl: 104px;
+
+  --line-height-base: 1;
+  --line-height-md: 1.2;
+}
