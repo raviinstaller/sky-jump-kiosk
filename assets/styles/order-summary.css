@@ -1,0 +1,55 @@
+      .summary-table {
+          background-color: white;
+          border-radius: 40px;
+          width: 100%;
+          max-width: 900px;
+          border-collapse: separate;
+          border-spacing: 0 15px;
+          overflow: hidden;
+          padding: 30px;
+          border: none;
+      }
+
+      .summary-table th {
+          font-weight: 700;
+          font-size: 28px;
+          line-height: 110%;
+          color: #002a58;
+          padding: 0px 10px 25px 10px;
+          text-align: start;
+          border: none;
+      }
+
+      .summary-table td {
+          font-size: 24px;
+          font-weight: 500;
+          color: #00235a;
+          padding: 10px 10px;
+          text-align: start;
+          font-family: "Assistant", sans-serif;
+          border: none;
+      }
+
+      .summary-table thead tr th {
+          border-bottom: 20px solid transparent;
+      }
+
+      .total-container {
+          background-color: white;
+          border-radius: 20px;
+          padding: 25px 40px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 25px;
+          width: 100%;
+          max-width: 900px;
+          box-sizing: border-box;
+      }
+
+      .total-label,
+      .total-amount {
+          font-size: 24px;
+          font-weight: 700;
+          color: #00235a;
+      }
