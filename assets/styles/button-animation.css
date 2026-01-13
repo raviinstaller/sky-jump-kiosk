@@ -1,5 +1,5 @@
 .outer-border-left {
-  position: relative;
+  position: relative !important;
 }
 
 .outer-border-left::after {
@@ -25,7 +25,7 @@
   inset: -10px;
   border-radius: inherit;
   pointer-events: none;
-  border: 3px solid var(--color-secondary);
+  border: 3px solid var(--color-secondary) !important;
   clip-path: inset(0 0 0 45%);
   transition: clip-path 0.45s cubic-bezier(0.8, 0, 0.2, 1);
   will-change: clip-path;

@@ -61,14 +61,21 @@
           </div>
           <div class="input-group">
             <label for="id-number">תעודת זהות</label>
-            <div class="select-wrapper">
-              <input
-                type="text"
-                id="id-number"
-                name="id_number"
-                inputmode="numeric"
-                class="keyboard-input"
-              />
+            <div class="custom-select" id="id-type-select">
+              <div class="custom-select-trigger">
+                <span class="selected-text">בחר סוג תעודה</span>
+              </div>
+              <div class="custom-select-options">
+                <div class="custom-select-option" data-value="israeli">
+                  תעודת זהות ישראלית
+                </div>
+                <div class="custom-select-option" data-value="passport">
+                  דרכון
+                </div>
+                <div class="custom-select-option" data-value="temp">
+                  תעודה זמנית
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -216,7 +223,7 @@
     <div class="footer">
       <div class="footer-shape"></div>
       <div class="btn-box">
-        <button class="orange-btn has-left-icon">המשך</button>
+        <button class="orange-btn has-left-icon outer-left-border">המשך</button>
         <button class="blue-btn has-left-icon">חזרה</button>
       </div>
     </div>
@@ -345,6 +352,36 @@
           });
         });
       })();
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const select = document.getElementById("id-type-select");
+        const trigger = select.querySelector(".custom-select-trigger");
+        const options = select.querySelectorAll(".custom-select-option");
+        const selectedText = select.querySelector(".selected-text");
+
+        // open close dropdown
+        trigger.addEventListener("click", () => {
+          select.classList.toggle("open");
+        });
+
+        // option click
+        options.forEach((option) => {
+          option.addEventListener("click", () => {
+            options.forEach((o) => o.classList.remove("selected"));
+            option.classList.add("selected");
+
+            selectedText.textContent = option.textContent;
+            select.classList.remove("open");
+          });
+        });
+
+        // close when clicking outside
+        document.addEventListener("click", (e) => {
+          if (!select.contains(e.target)) {
+            select.classList.remove("open");
+          }
+        });
+      });
     </script>
   </body>
 </html>
