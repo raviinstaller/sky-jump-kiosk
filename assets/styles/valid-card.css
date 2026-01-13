@@ -71,3 +71,8 @@
     align-items: center;
     justify-content: center;
 }
+
+.valid-white-card {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}

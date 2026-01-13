@@ -6,6 +6,10 @@
     padding: 18px 24px;
 }
 
+.current-purchase-popup .popup-box {
+    border-radius: 16px;
+}
+
 .current-purchase-popup-box {
     max-width: none;
     background-color: #F5F7F8;
