@@ -3,8 +3,7 @@
 @import "./reset.css";
 @import "./root.css";
 @import "./global.css";
-@import "./typography.css";
-@import "../styles/form-content.css";
+@import "./form-content.css";
 @import "./steps.css";
 @import "./popup.css";
 @import "./redeem-club.css";
@@ -19,3 +18,4 @@
 @import "./customers.css";
 @import "./button-animation.css";
 @import "./keyboard.css";
+@import "./typography.css";

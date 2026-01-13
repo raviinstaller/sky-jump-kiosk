@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/main.css" />
-    <title>מילוי פרטי קופצים - Sky Jump</title>
+    <title>Identification</title>
   </head>
   <body>
     <div class="main">
@@ -41,11 +41,23 @@
         <div class="form-row">
           <div class="input-group">
             <label for="first-name">שם פרטי הורה</label>
-            <input type="text" id="first-name" name="first_name" required />
+            <input
+              type="text"
+              id="first-name"
+              name="first_name"
+              class="keyboard-input"
+              required
+            />
           </div>
           <div class="input-group">
             <label for="last-name">שם משפחה</label>
-            <input type="text" id="last-name" name="last_name" required />
+            <input
+              type="text"
+              id="last-name"
+              name="last_name"
+              class="keyboard-input"
+              required
+            />
           </div>
           <div class="input-group">
             <label for="id-number">תעודת זהות</label>
@@ -55,6 +67,7 @@
                 id="id-number"
                 name="id_number"
                 inputmode="numeric"
+                class="keyboard-input"
               />
             </div>
           </div>
@@ -62,15 +75,27 @@
         <div class="form-row">
           <div class="input-group">
             <label for="email">אימייל</label>
-            <input type="email" id="email" name="email" required />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="keyboard-input"
+              required
+            />
           </div>
           <div class="input-group">
             <label for="city">עיר</label>
-            <input type="text" id="city" name="city" />
+            <input type="text" id="city" name="city" class="keyboard-input" />
           </div>
           <div class="input-group">
             <label for="phone">טלפון</label>
-            <input type="tel" id="phone" name="phone" required />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="keyboard-input"
+              required
+            />
           </div>
         </div>
         <div class="form-row flex-row-reverse items-end">
@@ -114,7 +139,7 @@
           </div>
           <div class="input-group">
             <label>תאריך לידה הורה</label>
-            <input dir="rtl" type="tel" />
+            <input dir="rtl" type="tel" class="keyboard-input" />
           </div>
         </div>
       </form>
@@ -173,17 +198,17 @@
               >תאריך לידה
               <span class="sub-label">(הפעילות מעל גיל 3)</span></label
             >
-            <input dir="rtl" type="text" />
+            <input dir="rtl" type="text" class="keyboard-input" />
           </div>
 
           <div class="input-group">
             <label>שם משפחה</label>
-            <input dir="rtl" type="text" />
+            <input dir="rtl" type="text" class="keyboard-input" />
           </div>
 
           <div class="input-group">
             <label>שם פרטי</label>
-            <input dir="rtl" type="text" />
+            <input dir="rtl" type="text" class="keyboard-input" />
           </div>
         </div>
       </div>
@@ -195,5 +220,131 @@
         <button class="blue-btn has-left-icon">חזרה</button>
       </div>
     </div>
+
+    <!-- Custom Keyboard -->
+    <div class="keyboard-text-container">
+      <!-- Close button -->
+      <button class="close-btn" onclick="submitOk()">✕</button>
+
+      <!-- Numbers -->
+      <div class="keyboard-text-row">
+        <button class="data-number" onclick="addCharX('1')">1</button>
+        <button class="data-number" onclick="addCharX('2')">2</button>
+        <button class="data-number" onclick="addCharX('3')">3</button>
+        <button class="data-number" onclick="addCharX('4')">4</button>
+        <button class="data-number" onclick="addCharX('5')">5</button>
+        <button class="data-number" onclick="addCharX('6')">6</button>
+        <button class="data-number" onclick="addCharX('7')">7</button>
+        <button class="data-number" onclick="addCharX('8')">8</button>
+        <button class="data-number" onclick="addCharX('9')">9</button>
+        <button class="data-number" onclick="addCharX('0')">0</button>
+      </div>
+
+      <!-- Hebrew Row 1 -->
+      <div class="keyboard-text-row">
+        <button class="data-number" onclick="addCharX('ק')">ק</button>
+        <button class="data-number" onclick="addCharX('ר')">ר</button>
+        <button class="data-number" onclick="addCharX('א')">א</button>
+        <button class="data-number" onclick="addCharX('ט')">ט</button>
+        <button class="data-number" onclick="addCharX('ו')">ו</button>
+        <button class="data-number" onclick="addCharX('ן')">ן</button>
+        <button class="data-number" onclick="addCharX('ם')">ם</button>
+        <button class="data-number" onclick="addCharX('פ')">פ</button>
+      </div>
+
+      <!-- Hebrew Row 2 -->
+      <div class="keyboard-text-row">
+        <button class="data-number" onclick="addCharX('ש')">ש</button>
+        <button class="data-number" onclick="addCharX('ד')">ד</button>
+        <button class="data-number" onclick="addCharX('ג')">ג</button>
+        <button class="data-number" onclick="addCharX('כ')">כ</button>
+        <button class="data-number" onclick="addCharX('ע')">ע</button>
+        <button class="data-number" onclick="addCharX('י')">י</button>
+        <button class="data-number" onclick="addCharX('ח')">ח</button>
+        <button class="data-number" onclick="addCharX('ל')">ל</button>
+        <button class="data-number" onclick="addCharX('ך')">ך</button>
+        <button class="data-number" onclick="addCharX('ף')">ף</button>
+      </div>
+
+      <!-- Hebrew Row 3 -->
+      <div class="keyboard-text-row">
+        <button class="data-number" onclick="addCharX('ז')">ז</button>
+        <button class="data-number" onclick="addCharX('ס')">ס</button>
+        <button class="data-number" onclick="addCharX('ב')">ב</button>
+        <button class="data-number" onclick="addCharX('ה')">ה</button>
+        <button class="data-number" onclick="addCharX('נ')">נ</button>
+        <button class="data-number" onclick="addCharX('מ')">מ</button>
+        <button class="data-number" onclick="addCharX('צ')">צ</button>
+        <button class="data-number" onclick="addCharX('ת')">ת</button>
+        <button class="data-number" onclick="addCharX('ץ')">ץ</button>
+      </div>
+
+      <!-- Actions -->
+      <div class="keyboard-text-row actions">
+        <button class="data-number data-space" onclick="addCharX(' ')"></button>
+        <button class="data-number data-delete" onclick="deleteChar()">
+          ⌫
+        </button>
+        <button class="data-number data-ok" onclick="submitOk()">שמירה</button>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        let currentInput = null;
+
+        const keyboard = document.querySelector(".keyboard-text-container");
+        const allInputs = document.querySelectorAll(".keyboard-input");
+
+        function showKeyboard(input) {
+          currentInput = input;
+          keyboard.classList.add("is-open");
+          moveCaretToEnd(input);
+        }
+
+        function hideKeyboard() {
+          keyboard.classList.remove("is-open");
+          if (currentInput) currentInput.blur();
+          currentInput = null;
+        }
+
+        function moveCaretToEnd(input) {
+          input.focus();
+          const val = input.value;
+          input.value = "";
+          input.value = val;
+        }
+
+        /* ===== GLOBAL FUNCTIONS USED IN HTML ===== */
+
+        window.addCharX = function (val) {
+          if (!currentInput) return;
+          currentInput.value += val;
+          moveCaretToEnd(currentInput);
+        };
+
+        window.deleteChar = function () {
+          if (!currentInput) return;
+          currentInput.value = currentInput.value.slice(0, -1);
+          moveCaretToEnd(currentInput);
+        };
+
+        window.submitOk = function () {
+          hideKeyboard();
+        };
+
+        /* ===== INIT ===== */
+
+        document.addEventListener("DOMContentLoaded", function () {
+          if (!keyboard) return;
+
+          // Attach keyboard to all inputs with class 'keyboard-input'
+          allInputs.forEach((input) => {
+            input.addEventListener("focus", () => showKeyboard(input));
+            input.addEventListener("click", () => showKeyboard(input));
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
