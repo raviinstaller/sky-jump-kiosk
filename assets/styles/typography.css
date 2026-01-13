@@ -159,6 +159,10 @@
   flex-direction: row-reverse;
 }
 
+.gap-24 {
+  gap: 24px;
+}
+
 .gap-15 {
   gap: 15px;
 }
@@ -182,6 +186,7 @@
 .w-47-percent {
   max-width: 47.6%;
 }
+
 .w-full {
   width: 100%;
 }
@@ -197,6 +202,7 @@
 .max-w-665 {
   max-width: 665px;
 }
+
 .max-w-838 {
   max-width: 838px;
 }

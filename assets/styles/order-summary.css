@@ -9,7 +9,8 @@
     border: none;
 }
 
-.summary-table th {
+.summary-table th,
+.summary-table th span {
     font-weight: 700;
     font-size: 28px;
     line-height: var(--line-height-sm);
@@ -19,10 +20,11 @@
     border: none;
 }
 
-.summary-table td {
+.summary-table td,
+.summary-table td span {
     font-size: 28px;
     font-weight: 400;
-    color: var(--color-blue-600);
+    color: var(--color-blue-700);
     padding: 6px 10px;
     text-align: start;
     font-family: "Assistant", sans-serif;
