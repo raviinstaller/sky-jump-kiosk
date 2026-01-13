@@ -167,6 +167,10 @@
   flex-direction: row-reverse;
 }
 
+.gap-4 {
+  gap: 16px;
+}
+
 .gap-24 {
   gap: 24px;
 }
@@ -189,6 +193,10 @@
 
 .mb-0 {
   margin-bottom: 0 !important;
+}
+
+.mt-32 {
+  margin-top: 32px;
 }
 
 .mt-3 {

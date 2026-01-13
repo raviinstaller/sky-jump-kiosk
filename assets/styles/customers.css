@@ -1,0 +1,25 @@
+.customers .card-title {
+    font-weight: 500;
+    color: var(--white-color);
+    text-align: start;
+}
+
+.customers .text-with-tick {
+    background-color: #FFFFFF29;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--white-color);
+    gap: 10px;
+    width: fit-content;
+}
+
+.customers .child-title {
+    font-weight: 600;
+    color: var(--white-color);
+    font-size: 20px;
+}
+
+.customers .content-container {
+    gap: 16px;
+}
