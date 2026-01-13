@@ -10,7 +10,7 @@
 .steps-group::before {
   content: "";
   height: 3px;
-  width: 90%;
+  width: 80%;
   background-color: #ffffff;
   position: absolute;
   top: 35px;
@@ -41,7 +41,6 @@
       #023760 50%,
       #023760 50%,
       #023760 100%);
-  width: 80%;
 }
 
 .steps-group.step-4::before {

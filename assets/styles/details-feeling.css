@@ -1,0 +1,94 @@
+.form-card {
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.input-group {
+    flex: 1;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    color: var(--white-color);
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    height: 70px;
+    border-radius: 16px;
+    border: 1px solid #01010133;
+    border: none;
+    font-size: 24px;
+    outline: none;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.details-feeling-desc {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    color: var(--white-color);
+}
+
+.child-card {
+    background-color: #1e50a0;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.child-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.child-title {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 100%;
+    color: var(--white-color);
+}
+
+.add-child-btn {
+    background-color: var(--color-primary);
+    color: var(--white-color);
+    border: 1px solid var(--white-color);
+    padding: 14px 28px;
+    border-radius: 16px;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sub-label {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.delete-btn {
+    background-color: transparent;
+}
+
+.delete-btn {
+    background-color: var(--color-primary);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}

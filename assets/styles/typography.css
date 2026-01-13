@@ -115,6 +115,10 @@
   text-align: end;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-normal {
   font-weight: 400;
 }
@@ -145,6 +149,10 @@
 
 .items-center {
   align-items: center;
+}
+
+.items-end {
+  align-items: end;
 }
 
 .justify-center {
@@ -185,6 +193,10 @@
 
 .mt-3 {
   margin-top: 12px;
+}
+
+.mt-4 {
+  margin-top: 16px;
 }
 
 .w-32-percent {

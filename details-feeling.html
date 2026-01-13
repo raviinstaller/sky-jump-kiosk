@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <title>מילוי פרטי קופצים - Sky Jump</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="app-logo"></div>
+      <div class="steps-group step-1">
+        <div class="step-item">
+          <div class="step-item-number">1</div>
+          <div class="step-item-title">step 1</div>
+        </div>
+        <div class="step-item">
+          <div class="step-item-number">2</div>
+          <div class="step-item-title">step 2</div>
+        </div>
+        <div class="step-item">
+          <div class="step-item-number">3</div>
+          <div class="step-item-title">step 3</div>
+        </div>
+        <div class="step-item">
+          <div class="step-item-number">4</div>
+          <div class="step-item-title">step 4</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-6xl">מילוי פרטי קופצים</h2>
+        <p class="text-lg mt-3 text-center text-semibold font-assistant">
+          יש למלא את פרטי המבוגר / ההורה:
+        </p>
+      </div>
+      <form
+        action="/submit-your-endpoint"
+        method="POST"
+        class="form-card content-container parent-card"
+      >
+        <div class="form-row">
+          <div class="input-group">
+            <label for="first-name">שם פרטי הורה</label>
+            <input type="text" id="first-name" name="first_name" required />
+          </div>
+          <div class="input-group">
+            <label for="last-name">שם משפחה</label>
+            <input type="text" id="last-name" name="last_name" required />
+          </div>
+          <div class="input-group">
+            <label for="id-number">תעודת זהות</label>
+            <div class="select-wrapper">
+              <input
+                type="text"
+                id="id-number"
+                name="id_number"
+                inputmode="numeric"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="email">אימייל</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="input-group">
+            <label for="city">עיר</label>
+            <input type="text" id="city" name="city" />
+          </div>
+          <div class="input-group">
+            <label for="phone">טלפון</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+        </div>
+        <div class="form-row flex-row-reverse items-end">
+          <div dir="ltr">
+            <p class="details-feeling-desc">
+              אישור קבלת דיוור שיווקי (מבטיחים לא להציק 😉)
+            </p>
+            <p class="details-feeling-desc flex items-center gap-15 mt-4">
+              כן, שלחו לי הטבות ומבצעים שווים ב-SMS ודוא"ל
+              <span>
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="39"
+                    height="39"
+                    rx="7.5"
+                    fill="#FF9800"
+                  />
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="39"
+                    height="39"
+                    rx="7.5"
+                    stroke="white"
+                  />
+                  <path
+                    d="M17.0002 24.1701L12.8302 20.0001L11.4102 21.4101L17.0002 27.0001L29.0002 15.0001L27.5902 13.5901L17.0002 24.1701Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+            </p>
+          </div>
+          <div class="input-group">
+            <label>טלפון</label>
+            <input dir="rtl" type="tel" />
+          </div>
+        </div>
+      </form>
+      <div dir="ltr" class="form-card content-container child-card mt-20">
+        <div class="child-header">
+          <button type="button" class="add-child-btn">
+            הוספת ילד
+            <span
+              ><svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.661 15.3333L8.66016 8.34672L8.661 2"
+                  stroke="white"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M1.9987 8.66441L8.98531 8.66357L15.332 8.66441"
+                  stroke="white"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+          </button>
+          <h2 class="child-title">ילדים בחזקתי מתחת לגיל 18</h2>
+        </div>
+
+        <div class="form-row items-end">
+          <div class="delete-col">
+            <button type="button" class="delete-btn">
+              <svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.31394 26.5264V7.57902H5.05078V5.05271H11.3666V3.78955H18.9455V5.05271H25.2613V7.57902H23.9981V26.5264H6.31394ZM8.84025 24.0001H21.4718V7.57902H8.84025V24.0001ZM11.3666 21.4738H13.8929V10.1053H11.3666V21.4738ZM16.4192 21.4738H18.9455V10.1053H16.4192V21.4738Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="input-group">
+            <label
+              >תאריך לידה
+              <span class="sub-label">(הפעילות מעל גיל 3)</span></label
+            >
+            <input dir="rtl" type="text" />
+          </div>
+
+          <div class="input-group">
+            <label>שם משפחה</label>
+            <input dir="rtl" type="text" />
+          </div>
+
+          <div class="input-group">
+            <label>שם פרטי</label>
+            <input dir="rtl" type="text" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-shape"></div>
+      <div class="btn-box">
+        <button class="orange-btn has-left-icon">המשך</button>
+        <button class="blue-btn has-left-icon">חזרה</button>
+      </div>
+    </div>
+  </body>
+</html>
