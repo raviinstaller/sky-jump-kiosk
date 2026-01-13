@@ -61,7 +61,7 @@ body {
   gap: 16px;
 }
 
-.order-number-button::before {
+.order-number-button::after {
   content: "";
   height: 52px;
   width: 52px;
@@ -73,7 +73,12 @@ body {
 }
 
 .text-color-gradient {
-  background: linear-gradient(360deg, #001F2C 11.11%, #004C8C 40.56%, #00375F 79.17%);
+  background: linear-gradient(
+    360deg,
+    #001f2c 11.11%,
+    #004c8c 40.56%,
+    #00375f 79.17%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
