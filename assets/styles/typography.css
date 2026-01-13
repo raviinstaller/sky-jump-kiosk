@@ -179,6 +179,14 @@
   margin-top: 200px;
 }
 
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mt-3 {
+  margin-top: 12px;
+}
+
 .w-32-percent {
   max-width: 32%;
 }
