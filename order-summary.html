@@ -7,34 +7,77 @@
     <title>סיכום הזמנה - Sky Jump</title>
   </head>
   <body>
-    <table class="summary-table">
-      <thead>
-        <tr>
-          <th>פירוט הכרטיסים</th>
-          <th>סוג</th>
-          <th>כמות הכרטיסים</th>
-          <th>מחיר</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>קופץ מעל גיל 6</td>
-          <td>קופץ מעל גיל 6</td>
-          <td>2</td>
-          <td>80 ₪</td>
-        </tr>
-        <tr>
-          <td>קופץ מעל גיל 6</td>
-          <td>גרביים</td>
-          <td>2</td>
-          <td>80 ₪</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="main">
+      <div class="app-logo"></div>
+      <div class="steps-group step-3">
+        <div class="step-item">
+          <div class="step-item-number">1</div>
+          <div class="step-item-title">בחירת כרטיסים</div>
+        </div>
+        <div class="step-item">
+          <div class="step-item-number">2</div>
+          <div class="step-item-title">תשלום</div>
+        </div>
+        <div class="step-item">
+          <div class="step-item-number">3</div>
+          <div class="step-item-title">אישור הזמנה</div>
+        </div>
+        <div class="step-item">
+          <div class="step-item-number">4</div>
+          <div class="step-item-title">אישור הזמנה</div>
+        </div>
+      </div>
+      <div class="content-container">
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>פירוט הכרטיסים</th>
+              <th>סוג</th>
+              <th>כמות הכרטיסים</th>
+              <th>מחיר</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>קופץ מעל גיל 6</td>
+              <td>קופץ מעל גיל 6</td>
+              <td>2</td>
+              <td><span>80 ₪</span></td>
+            </tr>
+            <tr>
+              <td>קופץ מעל גיל 6</td>
+              <td>גרביים</td>
+              <td>2</td>
+              <td><span>80 ₪</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div
+          class="content-container content-container-white total-container flex-row-reverse justify-between"
+        >
+          <div class="total-amount">160 ₪</div>
+          <div class="total-label">סה"כ לתשלום</div>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="promo-section-container">
+          <form class="promo-form">
+            <div class="input-wrapper">
+              <label for="promo-code">קוד הנחה / קופון</label>
+              <input type="text" id="promo-code" />
+            </div>
 
-    <div class="total-container">
-      <div class="total-amount">160 ₪</div>
-      <div class="total-label">סה"כ לתשלום</div>
+            <button type="submit" class="orange-submit-btn">הוספה</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-shape"></div>
+      <div class="btn-box">
+        <button class="orange-btn has-left-icon">המשך</button>
+        <button class="blue-btn has-left-icon">חזרה</button>
+      </div>
     </div>
   </body>
 </html>
