@@ -25,21 +25,19 @@ body::before {
   z-index: 1;
   background-image: url("../images/claud-1.png");
   background-repeat: no-repeat;
-  background-size: 350px auto;
-  background-position: 5% 15%;
-  opacity: 0.7;
-  animation: cloudDrift1 20s ease-in-out infinite;
+  background-size: 650px auto;
+  background-position: 55% -5%;
+  animation: cloudDrift1 26s ease-in-out infinite;
 }
 
 /* ===== TOP CENTER CLOUD ===== */
 body::after {
   z-index: 2;
-  background-image: url("../images/claud-2.png");
+  background-image: url("../images/claud-3.png");
   background-repeat: no-repeat;
-  background-size: 320px auto;
-  background-position: 45% 8%;
-  opacity: 0.6;
-  animation: cloudDrift2 25s ease-in-out infinite;
+  background-size: 420px auto;
+  background-position: 0% 20%;
+  animation: cloudDrift2 28s ease-in-out infinite;
 }
 
 html::before,
@@ -53,12 +51,11 @@ html::after {
 /* ===== TOP RIGHT CLOUD ===== */
 html::before {
   z-index: 3;
-  background-image: url("../images/claud-3.png");
+  background-image: url("../images/claud-2.png");
   background-repeat: no-repeat;
-  background-size: 300px auto;
-  background-position: 88% 12%;
-  opacity: 0.65;
-  animation: cloudDrift3 22s ease-in-out infinite;
+  background-size: 500px auto;
+  background-position: 110% 22%;
+  animation: cloudDrift3 30s ease-in-out infinite;
 }
 
 /* ===== MIDDLE RIGHT CLOUD ===== */
@@ -66,9 +63,8 @@ html::after {
   z-index: 4;
   background-image: url("../images/claud-4.png");
   background-repeat: no-repeat;
-  background-size: 380px auto;
-  background-position: 85% 45%;
-  opacity: 0.7;
+  background-size: 580px auto;
+  background-position: 105% 50%;
   animation: cloudDrift4 28s ease-in-out infinite;
 }
 
@@ -87,10 +83,9 @@ html::after {
   z-index: 5;
   background-image: url("../images/claud-5.png");
   background-repeat: no-repeat;
-  background-size: 420px auto;
-  background-position: 8% 78%;
-  opacity: 0.75;
-  animation: cloudDrift5 24s ease-in-out infinite;
+  background-size: 570px auto;
+  background-position: 0% 70%;
+  animation: cloudDrift5 30s ease-in-out infinite;
 }
 
 /* ===== BOTTOM RIGHT CLOUD ===== */
@@ -102,69 +97,68 @@ html::after {
   z-index: 6;
   background-image: url("../images/claud-6.png");
   background-repeat: no-repeat;
-  background-size: 350px auto;
-  background-position: 82% 85%;
-  opacity: 0.7;
-  animation: cloudDrift6 21s ease-in-out infinite;
+  background-size: 650px auto;
+  background-position: 82% 90%;
+  animation: cloudDrift6 25s ease-in-out infinite;
 }
 
 /* ===== Smooth Drifting Animations ===== */
 @keyframes cloudDrift1 {
   0%,
   100% {
-    transform: translate(0, 0);
+    transform: translateX(0);
   }
   50% {
-    transform: translate(-150px, -30px);
+    transform: translateX(-150px);
   }
 }
 
 @keyframes cloudDrift2 {
   0%,
   100% {
-    transform: translate(0, 0);
+    transform: translateX(0);
   }
   50% {
-    transform: translate(120px, 40px);
+    transform: translateX(-120px);
   }
 }
 
 @keyframes cloudDrift3 {
   0%,
   100% {
-    transform: translate(0, 0);
+    transform: translateX(0);
   }
   50% {
-    transform: translate(-140px, 45px);
+    transform: translateX(140px);
   }
 }
 
 @keyframes cloudDrift4 {
   0%,
   100% {
-    transform: translate(0, 0);
+    transform: translateX(0);
   }
   50% {
-    transform: translate(100px, -50px);
+    transform: translateX(100px);
   }
 }
 
 @keyframes cloudDrift5 {
   0%,
   100% {
-    transform: translate(0, 0);
+    transform: translateX(0);
   }
   50% {
-    transform: translate(-130px, 35px);
+    transform: translateX(-130px);
   }
 }
 
 @keyframes cloudDrift6 {
   0%,
   100% {
-    transform: translate(0, 0);
+    transform: translateX(0);
   }
   50% {
-    transform: translate(160px, -40px);
+    transform: translateX(160px);
   }
 }

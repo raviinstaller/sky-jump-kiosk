@@ -1,14 +1,3 @@
-body {
-  background-image: url("../images/bg.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #1ba2dd;
-  min-height: 100vh;
-  font-family: "Noto Sans Hebrew", sans-serif;
-  position: relative;
-}
-
 .main {
   padding: 50px;
   display: flex;
