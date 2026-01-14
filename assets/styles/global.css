@@ -6,6 +6,7 @@ body {
   background-color: #1ba2dd;
   min-height: 100vh;
   font-family: "Noto Sans Hebrew", sans-serif;
+  position: relative;
 }
 
 .main {
