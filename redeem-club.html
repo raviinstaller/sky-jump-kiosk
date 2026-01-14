@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/main.css" />
+    <script src="./assets/lottie/lottie.js"></script>
+
     <title>האם תרצה לממש מועדון או לקנות באשראי?</title>
   </head>
   <body>
@@ -30,19 +32,38 @@
       <h2 class="text-6xl">האם תרצה לממש מועדון או לקנות באשראי?</h2>
       <div class="club max-w-838 mx-auto">
         <div class="club-box">
-          <img
+          <!-- <img
             class="club-box-img"
             src="./assets/images/online-payment.png"
             alt="add user"
-          />
+          /> -->
+          <lottie-player
+            class="max-w-180 mx-auto"
+            id="warning"
+            src="./assets/json/online-payment.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+          ></lottie-player>
+
           <p class="text-lg club-box-title">רכישה באשראי/ מימוש כרטיסייה</p>
         </div>
         <div class="club-box selected">
-          <img
+          <!-- <img
             class="club-box-img"
             src="./assets/images/add-user.png"
             alt="add user"
-          />
+          /> -->
+          <lottie-player
+            class="max-w-180 mx-auto"
+            id="warning"
+            src="./assets/json/add-user.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+          ></lottie-player>
           <p class="text-lg club-box-title">מימוש מועדוני לקוחות</p>
         </div>
       </div>
