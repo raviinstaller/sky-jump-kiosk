@@ -226,9 +226,11 @@
 .pt-50 {
   padding-top: 50px;
 }
+
 .pb-30 {
   padding-bottom: 30px;
 }
+
 .max-w-665 {
   max-width: 665px;
 }
@@ -236,6 +238,7 @@
 .max-w-838 {
   max-width: 838px;
 }
+
 .lh-140 {
   line-height: 140%;
 }
