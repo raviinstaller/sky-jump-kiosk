@@ -1,0 +1,82 @@
+.tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+    z-index: 1000;
+}
+
+.tooltip-content {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-40%);
+    background: white;
+    border-radius: 28px;
+    padding: 25px 30px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    z-index: 1000;
+    min-width: 403px;
+}
+
+.tooltip-content::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 35%;
+    transform: translateX(50%);
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid white;
+}
+
+.tooltip-title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 110%;
+    color: #002A58;
+    text-align: right;
+
+}
+
+.tooltip-numbers {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.tooltip-numbers li {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 110%;
+    text-align: right;
+    color: var(--color-text-primary);
+    margin-top: 20px;
+}
+
+.tooltip-numbers li:hover {
+    background-color: #f5f9ff;
+}
+
+.tooltip-numbers li:last-child {
+    border-bottom: none;
+}
+
+.tooltip-wrapper:hover .tooltip-content,
+.tooltip-content:hover {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.tooltip-numbers li::selection {
+    background-color: #1a5490;
+    color: white;
+}

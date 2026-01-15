@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <title>סיכום הזמנה - Sky Jump</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="app-logo"></div>
+      <div class="steps-group step-4">
+        <div class="step-item">
+          <div class="step-item-number">01</div>
+          <div class="step-item-title">בחירת כרטיסים</div>
+        </div>
+        <div class="step-item">
+          <div class="step-item-number">02</div>
+          <div class="step-item-title">תשלום</div>
+        </div>
+        <div class="step-item">
+          <div class="step-item-number">03</div>
+          <div class="step-item-title">אישור הזמנה</div>
+        </div>
+        <div class="step-item">
+          <div class="step-item-number">04</div>
+          <div class="step-item-title">אישור הזמנה</div>
+        </div>
+      </div>
+      <h2 class="text-6xl">מימוש מועדונים</h2>
+      <div class="content-container">
+        <h2 class="text-white text-2xl">נא לסרוק את הברקוד או להקיש את</h2>
+        <h2
+          class="text-white text-2xl flex justify-center flex-row-reverse gap-4"
+        >
+          <div class="tooltip-wrapper">
+            <svg
+              width="49"
+              height="49"
+              viewBox="0 0 49 49"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style="cursor: pointer"
+            >
+              <ellipse cx="25" cy="24.5" rx="16" ry="17.5" fill="white" />
+              <path
+                d="M24.5026 4.08301C13.2326 4.08301 4.08594 13.2297 4.08594 24.4997C4.08594 35.7697 13.2326 44.9163 24.5026 44.9163C35.7726 44.9163 44.9193 35.7697 44.9193 24.4997C44.9193 13.2297 35.7726 4.08301 24.5026 4.08301ZM24.5026 34.708C23.3797 34.708 22.4609 33.7893 22.4609 32.6663V24.4997C22.4609 23.3768 23.3797 22.458 24.5026 22.458C25.6255 22.458 26.5443 23.3768 26.5443 24.4997V32.6663C26.5443 33.7893 25.6255 34.708 24.5026 34.708ZM26.5443 18.3747H22.4609V14.2913H26.5443V18.3747Z"
+                fill="#87B900"
+              />
+            </svg>
+            <div class="tooltip-content">
+              <div class="tooltip-title">דוגמאות למספרי מועדונים</div>
+              <ul class="tooltip-numbers">
+                <li>1280181012</li>
+                <li>1280181012</li>
+                <li>1280181012</li>
+                <li>1280181012</li>
+              </ul>
+            </div>
+          </div>
+          מספר כרטיס חבר או קוד הטבה
+        </h2>
+        <div class="promo-section-container">
+          <form class="promo-form">
+            <div class="input-wrapper">
+              <label for="promo-code">הזן כאן את מספר הכרטיס</label>
+              <input type="text" id="promo-code" />
+            </div>
+
+            <button type="submit" class="orange-submit-btn">הוספה</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-shape"></div>
+      <div class="btn-box">
+        <button class="orange-btn has-left-icon outer-border-left">המשך</button>
+        <button class="blue-btn outer-border-right">
+          חזרה
+          <img
+            class="relative z-10"
+            src="/assets/images/right-white-arrow.png"
+            alt="left arrow"
+          />
+        </button>
+      </div>
+    </div>
+    <div class="keyboard-text-container">
+      <!-- Close button -->
+      <button class="close-btn" onclick="submitOk()">✕</button>
+
+      <!-- Numbers -->
+      <div class="keyboard-text-row">
+        <button class="data-number" onclick="addCharX('1')">1</button>
+        <button class="data-number" onclick="addCharX('2')">2</button>
+        <button class="data-number" onclick="addCharX('3')">3</button>
+        <button class="data-number" onclick="addCharX('4')">4</button>
+        <button class="data-number" onclick="addCharX('5')">5</button>
+        <button class="data-number" onclick="addCharX('6')">6</button>
+        <button class="data-number" onclick="addCharX('7')">7</button>
+        <button class="data-number" onclick="addCharX('8')">8</button>
+        <button class="data-number" onclick="addCharX('9')">9</button>
+        <button class="data-number" onclick="addCharX('0')">0</button>
+      </div>
+
+      <!-- QWERTY -->
+      <div class="keyboard-text-row">
+        <button class="data-number" onclick="addCharX('q')">q</button>
+        <button class="data-number" onclick="addCharX('w')">w</button>
+        <button class="data-number" onclick="addCharX('e')">e</button>
+        <button class="data-number" onclick="addCharX('r')">r</button>
+        <button class="data-number" onclick="addCharX('t')">t</button>
+        <button class="data-number" onclick="addCharX('y')">y</button>
+        <button class="data-number" onclick="addCharX('u')">u</button>
+        <button class="data-number" onclick="addCharX('i')">i</button>
+        <button class="data-number" onclick="addCharX('o')">o</button>
+        <button class="data-number" onclick="addCharX('p')">p</button>
+      </div>
+
+      <!-- ASDF -->
+      <div class="keyboard-text-row">
+        <button class="data-number" onclick="addCharX('a')">a</button>
+        <button class="data-number" onclick="addCharX('s')">s</button>
+        <button class="data-number" onclick="addCharX('d')">d</button>
+        <button class="data-number" onclick="addCharX('f')">f</button>
+        <button class="data-number" onclick="addCharX('g')">g</button>
+        <button class="data-number" onclick="addCharX('h')">h</button>
+        <button class="data-number" onclick="addCharX('j')">j</button>
+        <button class="data-number" onclick="addCharX('k')">k</button>
+        <button class="data-number" onclick="addCharX('l')">l</button>
+        <button class="data-number" onclick="addCharX('@')">@</button>
+      </div>
+
+      <!-- ZXCV -->
+      <div class="keyboard-text-row">
+        <button class="data-number" onclick="addCharX('z')">z</button>
+        <button class="data-number" onclick="addCharX('x')">x</button>
+        <button class="data-number" onclick="addCharX('c')">c</button>
+        <button class="data-number" onclick="addCharX('v')">v</button>
+        <button class="data-number" onclick="addCharX('b')">b</button>
+        <button class="data-number" onclick="addCharX('n')">n</button>
+        <button class="data-number" onclick="addCharX('m')">m</button>
+        <button class="data-number" onclick="addCharX('.')">.</button>
+        <button class="data-number" onclick="addCharX('_')">_</button>
+        <button class="data-number" onclick="addCharX('-')">-</button>
+      </div>
+
+      <!-- Actions -->
+      <div class="keyboard-text-row actions">
+        <button class="data-number data-space" onclick="addCharX(' ')"></button>
+        <button class="data-number data-delete" onclick="deleteChar()">
+          ⌫
+        </button>
+        <button class="data-number data-ok" onclick="submitOk()">שמירה</button>
+      </div>
+    </div>
+    <script>
+      (function () {
+        let currentInput = null;
+
+        const keyboard = document.querySelector(".keyboard-text-container");
+        const promoInput = document.getElementById("promo-code");
+
+        function showKeyboard(input) {
+          currentInput = input;
+          keyboard.classList.add("is-open");
+          moveCaretToEnd(input);
+        }
+
+        function hideKeyboard() {
+          keyboard.classList.remove("is-open");
+          if (currentInput) currentInput.blur();
+          currentInput = null;
+        }
+
+        function moveCaretToEnd(input) {
+          input.focus();
+          const val = input.value;
+          input.value = "";
+          input.value = val;
+        }
+
+        /* ===== GLOBAL FUNCTIONS USED IN HTML ===== */
+
+        window.addCharX = function (val) {
+          if (!currentInput) return;
+          currentInput.value += val;
+          moveCaretToEnd(currentInput);
+        };
+
+        window.deleteChar = function () {
+          if (!currentInput) return;
+          currentInput.value = currentInput.value.slice(0, -1);
+          moveCaretToEnd(currentInput);
+        };
+
+        window.submitOk = function () {
+          hideKeyboard();
+        };
+
+        /* ===== INIT ===== */
+
+        document.addEventListener("DOMContentLoaded", function () {
+          if (!promoInput || !keyboard) return;
+
+          promoInput.addEventListener("focus", () => showKeyboard(promoInput));
+          promoInput.addEventListener("click", () => showKeyboard(promoInput));
+        });
+      })();
+    </script>
+  </body>
+</html>
