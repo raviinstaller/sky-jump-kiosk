@@ -1,0 +1,57 @@
+.customers .card-title {
+    font-weight: 500;
+    color: var(--white-color);
+    text-align: start;
+    font-size: 20px;
+}
+
+.customers .text-with-tick {
+    background-color: #FFFFFF29;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--white-color);
+    gap: 10px;
+    width: fit-content;
+}
+
+.customers .child-title {
+    font-weight: 600;
+    color: var(--white-color);
+    font-size: 20px;
+}
+
+.customers .content-container {
+    gap: 16px;
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.check-input {
+    display: none;
+}
+
+.check-box svg {
+    cursor: pointer;
+}
+
+.box-bg {
+    fill: white;
+    stroke: #cccccc;
+}
+
+.box-tick {
+    fill: transparent;
+}
+
+.check-input:checked+.check-box .box-bg {
+    fill: #ff9800;
+}
+
+.check-input:checked+.check-box .box-tick {
+    fill: white;
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <title>מילוי פרטי קופצים</title>
+  </head>
+  <body>
+    <div class="cloud-layer"></div>
+
+    <div class="main">
+      <div class="app-logo"></div>
+      <div style="height: 200px"></div>
+      <div>
+        <h2 class="text-6xl">מילוי פרטי קופצים</h2>
+        <p class="text-lg mt-3 text-center text-semibold font-assistant">
+          יש למלא את פרטי המבוגר / ההורה:
+        </p>
+      </div>
+      <form
+        action="/submit-your-endpoint"
+        method="POST"
+        class="identification-form-style w-full mx-auto"
+      >
+        <label style="color: #013d6c" class="text-bold" for="first-name"
+          >הזדהות
+        </label>
+        <input
+          placeholder="אנא הכנס תעודת זהות"
+          class="w-full keyboard-input"
+          type="text"
+          id="first-name"
+          name="first_name"
+          required
+        />
+      </form>
+    </div>
+    <div class="footer">
+      <div class="footer-shape"></div>
+      <div class="btn-box">
+        <button class="orange-btn has-left-icon outer-border-left">המשך</button>
+        <button class="blue-btn w-full outer-border-right">
+          חזרה
+          <img
+            class="relative z-10"
+            src="/assets/images/right-blue-arrow.png"
+            alt="left arrow"
+          />
+        </button>
+      </div>
+    </div>
+
+    <!-- Number Keyboard -->
+    <div class="keyboard-container">
+      <button class="close-btn" onclick="submitOk()">✕</button>
+
+      <!-- Row 1: 7, 8, 9 -->
+      <button class="data-number" onclick="addCharX('7')">7</button>
+      <button class="data-number" onclick="addCharX('8')">8</button>
+      <button class="data-number" onclick="addCharX('9')">9</button>
+
+      <!-- Row 2: 4, 5, 6 -->
+      <button class="data-number" onclick="addCharX('4')">4</button>
+      <button class="data-number" onclick="addCharX('5')">5</button>
+      <button class="data-number" onclick="addCharX('6')">6</button>
+
+      <!-- Row 3: 1, 2, 3 -->
+      <button class="data-number" onclick="addCharX('1')">1</button>
+      <button class="data-number" onclick="addCharX('2')">2</button>
+      <button class="data-number" onclick="addCharX('3')">3</button>
+
+      <div class="keyboard-last-row data-col-span-3">
+        <button class="data-number" onclick="addCharX('+')">+</button>
+        <button class="data-number" onclick="addCharX('0')">0</button>
+        <button class="data-number" onclick="deleteChar()">⌫</button>
+        <button class="data-operationTashlum" onclick="submitOk()">המשך</button>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        let currentInput = null;
+
+        const keyboard = document.querySelector(".keyboard-container");
+        const idInput = document.querySelector(".keyboard-input");
+
+        function showKeyboard(input) {
+          currentInput = input;
+          keyboard.classList.add("is-open");
+          moveCaretToEnd(input);
+        }
+
+        function hideKeyboard() {
+          keyboard.classList.remove("is-open");
+          if (currentInput) currentInput.blur();
+          currentInput = null;
+        }
+
+        function moveCaretToEnd(input) {
+          input.focus();
+          const val = input.value;
+          input.value = "";
+          input.value = val;
+        }
+
+        /* ===== GLOBAL FUNCTIONS USED IN HTML ===== */
+        window.addCharX = function (val) {
+          if (!currentInput) return;
+          currentInput.value += val;
+          moveCaretToEnd(currentInput);
+        };
+
+        window.deleteChar = function () {
+          if (!currentInput) return;
+          currentInput.value = currentInput.value.slice(0, -1);
+          moveCaretToEnd(currentInput);
+        };
+
+        window.submitOk = function () {
+          hideKeyboard();
+        };
+
+        /* ===== INIT ===== */
+
+        document.addEventListener("DOMContentLoaded", function () {
+          if (!idInput || !keyboard) return;
+
+          idInput.addEventListener("focus", () => showKeyboard(idInput));
+          idInput.addEventListener("click", () => showKeyboard(idInput));
+        });
+      })();
+    </script>
+
+    <style>
+      .keyboard-container {
+        background-color: #ebedf2;
+        padding: 60px;
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(3, 1fr); /* first 3 rows */
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+
+        transform: translateY(100%);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transition: transform 0.35s ease, opacity 0.2s ease;
+      }
+      .keyboard-last-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+        gap: 16px;
+        grid-column: span 3; /* span 2 of the 4 columns */
+      }
+
+      /* visible state */
+      .keyboard-container.is-open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      .keyboard-container .data-number,
+      .keyboard-container .data-operationTashlum {
+        border: none;
+        background-color: white;
+        padding: 30px;
+        border-radius: 16px;
+        font-size: 50px;
+        font-weight: 600;
+        box-shadow: 0 3px 0 #898a8d;
+        transition: 0.1s ease-in-out;
+        cursor: pointer;
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .keyboard-container .data-number:active,
+      .keyboard-container .data-operationTashlum:active {
+        box-shadow: 0 1px 0 #898a8d;
+        transform: translateY(2px);
+      }
+
+      .keyboard-container .data-operationTashlum {
+        background-color: #ff9800;
+        color: white;
+      }
+    </style>
+  </body>
+</html>

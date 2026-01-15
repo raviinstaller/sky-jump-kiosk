@@ -1,0 +1,26 @@
+.experience {
+    gap: 0;
+}
+
+.mt-44 {
+    margin-top: 44px;
+}
+
+.experience-card {
+    background-color: #F5F7F899;
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.experience-content-container {
+    padding: 16px;
+    border: 1px solid #00000029
+}
+
+.experience-content {
+    justify-content: start;
+}

@@ -1,0 +1,136 @@
+.main {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 50px;
+  position: relative;
+  z-index: 10;
+}
+
+.app-logo {
+  height: 268px;
+  width: 310px;
+  background-image: url("../images/logo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content-container {
+  border-radius: 16px;
+  padding: 32px;
+  background-color: var(--color-secondary);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.content-container-white {
+  background-color: #ffffff;
+}
+
+.content-container-total {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-number-button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 16px;
+  text-align: center;
+  font-size: var(--size-xl);
+  font-weight: 700;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.order-number-button::after {
+  content: "";
+  height: 52px;
+  width: 52px;
+  background-image: url("../images/check-icon-small.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.text-color-gradient {
+  background: linear-gradient(
+    360deg,
+    #001f2c 11.11%,
+    #004c8c 40.56%,
+    #00375f 79.17%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.orange-btn {
+  padding: 26px 60px;
+  background-color: var(--color-primary);
+  border-radius: 16px;
+  flex-direction: row-reverse;
+  color: var(--white-color);
+  line-height: 100%;
+  text-align: center;
+  font-size: 44px;
+  font-weight: 700;
+  width: 100%;
+  border: none;
+  font-family: "Assistant", sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.blue-btn {
+  padding: 29px 63px 29px 55px;
+  border: 2px solid var(--color-text-primary);
+  flex-direction: row-reverse;
+  border-radius: 16px;
+  color: var(--color-text-primary);
+  text-align: center;
+  line-height: 95%;
+  background-color: var(--white-color);
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Assistant", sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.white-btn {
+  padding: 30px 24px;
+  background-color: transparent;
+  border-color: var(--white-color);
+  color: var(--white-color);
+  flex-direction: row;
+  gap: 24px;
+  text-wrap-mode: nowrap;
+}
+
+.has-white-btn-left::after {
+  content: "";
+  width: 32px;
+  height: 32px;
+  background-image: url("/assets/images/right-white-arrow.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}

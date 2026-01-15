@@ -1,0 +1,89 @@
+.keyboard-text-container {
+  background-color: #ebedf2;
+  padding: 50px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+
+  /* hidden state */
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: transform 0.35s ease, opacity 0.2s ease;
+}
+
+/* visible state */
+.keyboard-text-container.is-open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.keyboard-text-row {
+  display: flex;
+  gap: 14px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.keyboard-text-container .data-number {
+  flex: 1;
+  min-width: 64px;
+  height: 72px;
+
+  border: none;
+  background-color: #fff;
+  border-radius: 16px;
+  font-size: 40px;
+  font-weight: 600;
+
+  box-shadow: 0 3px 0 #898a8d;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.keyboard-text-container .data-number:active {
+  box-shadow: 0 1px 0 #898a8d;
+  transform: translateY(2px);
+}
+
+.keyboard-text-row.actions {
+  gap: 16px;
+}
+
+.keyboard-text-row.actions .data-space {
+  flex: 3;
+}
+
+.keyboard-text-row.actions .data-delete,
+.keyboard-text-row.actions .data-ok {
+  flex: 1.2;
+}
+
+.keyboard-text-row.actions .data-ok {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.close-btn {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  z-index: 10000;
+  font-size: 32px;
+}

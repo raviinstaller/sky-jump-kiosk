@@ -1,0 +1,78 @@
+.white-table-card {
+    background: var(--white-color);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.table-scroll {
+    max-height: 770px;
+    direction: ltr;
+    overflow-y: scroll;
+}
+
+.addon-table {
+    direction: rtl;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.addon-table th {
+    text-align: right;
+    padding: 0;
+}
+
+.addon-table th span {
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+    text-align: end;
+}
+
+.addon-table td {
+    padding: 15px 0;
+    border-bottom: 1px solid #002b5820;
+}
+
+.addon-table tr:last-child td {
+    border-bottom: none;
+}
+
+
+.item-name {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.item-thumb {
+    width: 120px;
+    height: 79px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.qty-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-blue-700);
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.valid-white-card {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}

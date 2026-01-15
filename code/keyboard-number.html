@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .keyboard-container {
+        background-color: #ebedf2;
+        padding: 60px;
+        display: grid;
+        gap: 16px;
+        grid-template-columns: 1fr 1fr 1fr;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .keyboard-container .data-number,
+      .keyboard-container .data-operationTashlum {
+        outline: 0px none;
+        border: 0px none;
+        background-color: white;
+        padding: 20px;
+        border-radius: 16px;
+        font-size: 50px;
+        font-weight: 600;
+        box-shadow: 0px 3px 0px 0px #898a8d;
+        transition: 0.1s ease-in-out;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .keyboard-container .data-number:hover,
+      .keyboard-container .data-operationTashlum:hover {
+        box-shadow: 0px 1px 0px 0px #898a8d;
+      }
+
+      .keyboard-container .data-operationTashlum {
+        background-color: #4026b2;
+        color: white;
+      }
+
+      .keyboard-container .actions {
+        display: flex;
+        gap: 16px;
+      }
+      .keyboard-container .actions > button {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="keyboard-container">
+      <input
+        type="button"
+        class="data-number"
+        value="3"
+        onClick="addCharX(this.value);"
+        tabindex="3"
+      />
+      <input
+        type="button"
+        class="data-number"
+        value="2"
+        onClick="addCharX(this.value);"
+        tabindex="2"
+      />
+      <input
+        type="button"
+        class="data-number"
+        value="1"
+        onClick="addCharX(this.value);"
+        tabindex="1"
+      />
+
+      <input
+        type="button"
+        class="data-number"
+        value="6"
+        onClick="addCharX(this.value);"
+        tabindex="6"
+      />
+      <input
+        type="button"
+        class="data-number"
+        value="5"
+        onClick="addCharX(this.value);"
+        tabindex="5"
+      />
+      <input
+        type="button"
+        class="data-number"
+        value="4"
+        onClick="addCharX(this.value);"
+        tabindex="4"
+      />
+
+      <input
+        type="button"
+        class="data-number"
+        value="9"
+        onClick="addCharX(this.value);"
+        tabindex="9"
+      />
+
+      <input
+        type="button"
+        class="data-number"
+        value="8"
+        onClick="addCharX(this.value);"
+        tabindex="8"
+      />
+      <input
+        type="button"
+        class="data-number"
+        value="7"
+        onClick="addCharX(this.value);"
+        tabindex="7"
+      />
+      <div class="actions">
+        <button
+          tabindex="12"
+          type="button"
+          id="unb"
+          class="data-operationTashlum"
+          onClick="javascript:getPayments();"
+        >
+          <svg
+            width="35"
+            height="35"
+            viewBox="0 0 35 35"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.0613 23.8047L8.72241 17.4644L10.8349 15.3519L15.0613 19.5768L23.5111 11.1255L25.6251 13.2394L15.0613 23.8047Z"
+              fill="white"
+              stroke="#4026B2"
+              stroke-width="1.04577"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M1.25287 17.3593C1.25287 8.28353 8.61061 0.925781 17.6864 0.925781C26.7622 0.925781 34.12 8.28353 34.12 17.3593C34.12 26.4351 26.7622 33.7929 17.6864 33.7929C8.61061 33.7929 1.25287 26.4351 1.25287 17.3593ZM17.6864 30.8049C15.9207 30.8049 14.1723 30.4572 12.541 29.7815C10.9097 29.1058 9.42746 28.1154 8.17892 26.8668C6.93038 25.6183 5.93998 24.136 5.26427 22.5047C4.58857 20.8734 4.24079 19.125 4.24079 17.3593C4.24079 15.5936 4.58857 13.8452 5.26427 12.2139C5.93998 10.5826 6.93038 9.10037 8.17892 7.85183C9.42746 6.60329 10.9097 5.61289 12.541 4.93719C14.1723 4.26148 15.9207 3.9137 17.6864 3.9137C21.2524 3.9137 24.6724 5.33029 27.1939 7.85183C29.7154 10.3734 31.132 13.7933 31.132 17.3593C31.132 20.9253 29.7154 24.3453 27.1939 26.8668C24.6724 29.3884 21.2524 30.8049 17.6864 30.8049Z"
+              fill="white"
+              stroke="#4026B2"
+              stroke-width="1.04577"
+            />
+          </svg>
+        </button>
+        <button
+          tabindex="13"
+          type="button"
+          id="unb"
+          class="data-number"
+          onClick="javascript:getPayments();"
+        >
+          <svg
+            width="39"
+            height="29"
+            viewBox="0 0 39 29"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.254 9.4458L27.0812 19.2731"
+              stroke="black"
+              stroke-width="2.45681"
+              stroke-linecap="round"
+            />
+            <path
+              d="M17.254 19.2729L27.0812 9.4457"
+              stroke="black"
+              stroke-width="2.45681"
+              stroke-linecap="round"
+            />
+            <path
+              d="M9.7191 2.56665C10.3377 1.7418 11.3086 1.25635 12.3397 1.25635H33.6321C35.4412 1.25635 36.9078 2.72295 36.9078 4.5321V24.1866C36.9078 25.9957 35.4412 27.4624 33.6321 27.4624H12.3397C11.3086 27.4624 10.3377 26.9769 9.7191 26.1521L2.34866 16.3248C1.47513 15.1601 1.47513 13.5586 2.34866 12.3939L9.7191 2.56665Z"
+              stroke="black"
+              stroke-width="2.45681"
+            />
+          </svg>
+        </button>
+      </div>
+      <input
+        type="button"
+        class="data-number"
+        value="0"
+        onClick="addCharX(this.value);"
+        tabindex="10"
+      />
+
+      <input
+        type="button"
+        class="data-number"
+        value="+"
+        onClick="addCharX(this.value);"
+        tabindex="11"
+      />
+    </div>
+  </body>
+</html>

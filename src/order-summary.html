@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <title>סיכום הזמנה - Sky Jump</title>
+  </head>
+  <body>
+    <div class="cloud-layer"></div>
+
+    <div class="main">
+      <div class="app-logo"></div>
+      <div class="steps-group step-2">
+        <div class="step-item">
+          <div class="step-item-number">1</div>
+          <div class="step-item-title">בחירת כרטיסים</div>
+        </div>
+        <div class="step-item">
+          <div class="step-item-number">2</div>
+          <div class="step-item-title">תשלום</div>
+        </div>
+        <div class="step-item">
+          <div class="step-item-number">3</div>
+          <div class="step-item-title">אישור הזמנה</div>
+        </div>
+        <div class="step-item">
+          <div class="step-item-number">4</div>
+          <div class="step-item-title">אישור הזמנה</div>
+        </div>
+      </div>
+      <h2 class="text-6xl">סיכום הזמנה</h2>
+      <div class="content-container">
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>פירוט הכרטיסים</th>
+              <th>סוג</th>
+              <th>כמות הכרטיסים</th>
+              <th>מחיר</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>קופץ מעל גיל 6</td>
+              <td>קופץ מעל גיל 6</td>
+              <td>2</td>
+              <td><span>80 ₪</span></td>
+            </tr>
+            <tr>
+              <td>קופץ מעל גיל 6</td>
+              <td>גרביים</td>
+              <td>2</td>
+              <td><span>80 ₪</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div
+          class="content-container content-container-white total-container flex-row-reverse justify-between"
+        >
+          <div class="total-amount">160 ₪</div>
+          <div class="total-label">סה"כ לתשלום</div>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="promo-section-container">
+          <form class="promo-form">
+            <div class="input-wrapper">
+              <label for="promo-code">קוד הנחה / קופון</label>
+              <input type="text" id="promo-code" />
+            </div>
+
+            <button type="submit" class="orange-submit-btn">הוספה</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-shape"></div>
+      <div class="btn-box">
+        <button class="orange-btn has-left-icon outer-border-left">המשך</button>
+        <button class="blue-btn outer-border-right">
+          חזרה
+          <img
+            class="relative z-10"
+            src="/assets/images/right-blue-arrow.png"
+            alt="left arrow"
+          />
+        </button>
+      </div>
+    </div>
+    <div class="keyboard-text-container">
+      <!-- Close button -->
+      <button class="close-btn" onclick="submitOk()">✕</button>
+
+      <!-- Numbers -->
+      <div class="keyboard-text-row">
+        <button class="data-number" onclick="addCharX('1')">1</button>
+        <button class="data-number" onclick="addCharX('2')">2</button>
+        <button class="data-number" onclick="addCharX('3')">3</button>
+        <button class="data-number" onclick="addCharX('4')">4</button>
+        <button class="data-number" onclick="addCharX('5')">5</button>
+        <button class="data-number" onclick="addCharX('6')">6</button>
+        <button class="data-number" onclick="addCharX('7')">7</button>
+        <button class="data-number" onclick="addCharX('8')">8</button>
+        <button class="data-number" onclick="addCharX('9')">9</button>
+        <button class="data-number" onclick="addCharX('0')">0</button>
+      </div>
+
+      <!-- QWERTY -->
+      <div class="keyboard-text-row">
+        <button class="data-number" onclick="addCharX('q')">q</button>
+        <button class="data-number" onclick="addCharX('w')">w</button>
+        <button class="data-number" onclick="addCharX('e')">e</button>
+        <button class="data-number" onclick="addCharX('r')">r</button>
+        <button class="data-number" onclick="addCharX('t')">t</button>
+        <button class="data-number" onclick="addCharX('y')">y</button>
+        <button class="data-number" onclick="addCharX('u')">u</button>
+        <button class="data-number" onclick="addCharX('i')">i</button>
+        <button class="data-number" onclick="addCharX('o')">o</button>
+        <button class="data-number" onclick="addCharX('p')">p</button>
+      </div>
+
+      <!-- ASDF -->
+      <div class="keyboard-text-row">
+        <button class="data-number" onclick="addCharX('a')">a</button>
+        <button class="data-number" onclick="addCharX('s')">s</button>
+        <button class="data-number" onclick="addCharX('d')">d</button>
+        <button class="data-number" onclick="addCharX('f')">f</button>
+        <button class="data-number" onclick="addCharX('g')">g</button>
+        <button class="data-number" onclick="addCharX('h')">h</button>
+        <button class="data-number" onclick="addCharX('j')">j</button>
+        <button class="data-number" onclick="addCharX('k')">k</button>
+        <button class="data-number" onclick="addCharX('l')">l</button>
+        <button class="data-number" onclick="addCharX('@')">@</button>
+      </div>
+
+      <!-- ZXCV -->
+      <div class="keyboard-text-row">
+        <button class="data-number" onclick="addCharX('z')">z</button>
+        <button class="data-number" onclick="addCharX('x')">x</button>
+        <button class="data-number" onclick="addCharX('c')">c</button>
+        <button class="data-number" onclick="addCharX('v')">v</button>
+        <button class="data-number" onclick="addCharX('b')">b</button>
+        <button class="data-number" onclick="addCharX('n')">n</button>
+        <button class="data-number" onclick="addCharX('m')">m</button>
+        <button class="data-number" onclick="addCharX('.')">.</button>
+        <button class="data-number" onclick="addCharX('_')">_</button>
+        <button class="data-number" onclick="addCharX('-')">-</button>
+      </div>
+
+      <!-- Actions -->
+      <div class="keyboard-text-row actions">
+        <button class="data-number data-space" onclick="addCharX(' ')"></button>
+        <button class="data-number data-delete" onclick="deleteChar()">
+          ⌫
+        </button>
+        <button class="data-number data-ok" onclick="submitOk()">שמירה</button>
+      </div>
+    </div>
+    <script>
+      (function () {
+        let currentInput = null;
+
+        const keyboard = document.querySelector(".keyboard-text-container");
+        const promoInput = document.getElementById("promo-code");
+
+        function showKeyboard(input) {
+          currentInput = input;
+          keyboard.classList.add("is-open");
+          moveCaretToEnd(input);
+        }
+
+        function hideKeyboard() {
+          keyboard.classList.remove("is-open");
+          if (currentInput) currentInput.blur();
+          currentInput = null;
+        }
+
+        function moveCaretToEnd(input) {
+          input.focus();
+          const val = input.value;
+          input.value = "";
+          input.value = val;
+        }
+
+        /* ===== GLOBAL FUNCTIONS USED IN HTML ===== */
+
+        window.addCharX = function (val) {
+          if (!currentInput) return;
+          currentInput.value += val;
+          moveCaretToEnd(currentInput);
+        };
+
+        window.deleteChar = function () {
+          if (!currentInput) return;
+          currentInput.value = currentInput.value.slice(0, -1);
+          moveCaretToEnd(currentInput);
+        };
+
+        window.submitOk = function () {
+          hideKeyboard();
+        };
+
+        /* ===== INIT ===== */
+
+        document.addEventListener("DOMContentLoaded", function () {
+          if (!promoInput || !keyboard) return;
+
+          promoInput.addEventListener("focus", () => showKeyboard(promoInput));
+          promoInput.addEventListener("click", () => showKeyboard(promoInput));
+        });
+      })();
+    </script>
+  </body>
+</html>

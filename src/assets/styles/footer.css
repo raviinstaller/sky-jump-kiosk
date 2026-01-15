@@ -1,0 +1,16 @@
+.footer {
+  position: fixed;
+  width: 100%;
+  padding: 30px 100px;
+  bottom: 0;
+}
+
+.footer-shape {
+  position: absolute;
+  height: 160px;
+  background: white;
+  clip-path: polygon(7% 0%, 93% 0%, 100% 100%, 0% 100%);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}

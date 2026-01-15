@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiosk</title>
+    <script type="module" crossorigin src="./assets/main-BU3Q_AAi.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main-BFCgBG3J.css">
+  </head>
+  <body>
+    <div class="flex flex-col gap-10 min-h-screen bg-grid">
+      <header>
+        <img
+          src="./assets/header-CfHINQop.webp"
+          alt="funky world header"
+          class="w-full h-auto"
+        />
+      </header>
+      <main class="flex flex-col pt-20 grow items-center relative">
+        <button
+          class="absolute top-0 left-16 h-17 w-17 flex items-center justify-center bg-white border-2 border-slate-200 rounded-full"
+        >
+          <svg
+            width="39"
+            height="30"
+            viewBox="0 0 39 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2 15H38.5M2 15L16 1M2 15L16 29"
+              stroke="black"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+        <h1
+          class="text-8xl font-extrabold text-center bg-gradient-to-b from-[#1B104D] to-[#1A326F] bg-clip-text text-transparent"
+        >
+          פרטים אחרונים וסיימנו
+        </h1>
+        <p class="text-5xl font-semibold text-black">נא להזין שם מלא וטלפון</p>
+
+        <form
+          action=""
+          class="w-3xl text-4xl font-semibold text-black flex flex-col items-center text-center gap-10 py-20"
+        >
+          <div class="flex w-full gap-5 flex-col">
+            <label for="name">שם</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="הכניסו פרטים בבקשה"
+              class="focus:border-green focus:shadow-2xl focus:shadow-green/50 outline-0 bg-white p-10 text-center placeholder:text-black w-full border-3 border-black rounded-3xl"
+            />
+          </div>
+          <div class="flex w-full gap-5 flex-col">
+            <label for="phone">טלפון</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="הכניסו פרטים בבקשה"
+              class="focus:border-green focus:shadow-2xl focus:shadow-green/50 outline-0 bg-white p-10 text-center placeholder:text-black w-full border-3 border-black rounded-3xl"
+            />
+          </div>
+          <button class="w-full custom-button primary-btn btnEffectOne">
+            הבא
+          </button>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
