@@ -230,7 +230,9 @@
 .pb-30 {
   padding-bottom: 30px;
 }
-
+.z-10 {
+  z-index: 10;
+}
 .max-w-665 {
   max-width: 665px;
 }

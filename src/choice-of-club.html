@@ -1,60 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <title>Choice of Club</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./assets/styles/main.css" />
-  <title>האם תרצה לממש מועדון או לקנות באשראי?</title>
-</head>
-
-<body>
-  <div class="cloud-layer"></div>
-
-  <div class="main">
-    <div class="app-logo"></div>
-    <div class="steps-group step-1">
-      <div class="step-item">
-        <div class="step-item-number">01</div>
-        <div class="step-item-title">מילוי פרטים</div>
+  <body>
+    <div class="cloud-layer"></div>
+    <div class="main">
+      <div class="app-logo"></div>
+      <div class="steps-group step-1">
+        <div class="step-item">
+          <div class="step-item-number">01</div>
+          <div class="step-item-title">מילוי פרטים</div>
+        </div>
+        <div class="step-item">
+          <div class="step-item-number">02</div>
+          <div class="step-item-title">בחירת כרטיסים</div>
+        </div>
+        <div class="step-item">
+          <div class="step-item-number">03</div>
+          <div class="step-item-title">תשלום</div>
+        </div>
+        <div class="step-item">
+          <div class="step-item-number">04</div>
+          <div class="step-item-title">אישור הזמנה</div>
+        </div>
       </div>
-      <div class="step-item">
-        <div class="step-item-number">02</div>
-        <div class="step-item-title">בחירת כרטיסים</div>
+      <h2 class="text-6xl text-color-gradient">
+        האם תרצה לממש מועדון או לקנות באשראי?
+      </h2>
+      <div class="club max-w-838 mx-auto">
+        <div class="club-box">
+          <lottie-player
+            class="max-w-180 mx-auto"
+            id="online-payment"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+          >
+          </lottie-player>
+          <p class="text-lg club-box-title">רכישה באשראי/ מימוש כרטיסייה</p>
+        </div>
+        <div class="club-box selected">
+          <lottie-player
+            class="max-w-180 mx-auto"
+            id="add-user"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+          >
+          </lottie-player>
+          <p class="text-lg club-box-title">מימוש מועדוני לקוחות</p>
+        </div>
       </div>
-      <div class="step-item">
-        <div class="step-item-number">03</div>
-        <div class="step-item-title">תשלום</div>
-      </div>
-      <div class="step-item">
-        <div class="step-item-number">04</div>
-        <div class="step-item-title">אישור הזמנה</div>
+      <div class="footer z-10">
+        <div class="footer-shape"></div>
+        <div class="btn-box">
+          <button class="blue-btn outer-border-right w-full">
+            חזרה
+            <img
+              class="relative z-10"
+              src="./assets/images/right-blue-arrow.png"
+              alt="right arrow"
+            />
+          </button>
+        </div>
       </div>
     </div>
-    <h2 class="text-6xl">האם תרצה לממש מועדון או לקנות באשראי?</h2>
-    <div class="club max-w-838 mx-auto">
-      <div class="club-box">
-        <lottie-player class="max-w-180 mx-auto" id="online-payment" background="transparent" speed="1" loop autoplay>
-        </lottie-player>
-        <p class="text-lg club-box-title">רכישה באשראי/ מימוש כרטיסייה</p>
-      </div>
-      <div class="club-box selected">
-        <lottie-player class="max-w-180 mx-auto" id="add-user" background="transparent" speed="1" loop autoplay>
-        </lottie-player>
-        <p class="text-lg club-box-title">מימוש מועדוני לקוחות</p>
-      </div>
-    </div>
-    <div class="footer">
-      <div class="footer-shape"></div>
-      <div class="btn-box">
-        <button class="blue-btn outer-border-right w-full">
-          חזרה
-          <img class="relative z-10" src="/assets/images/right-blue-arrow.png" alt="left arrow" />
-        </button>
-      </div>
-    </div>
-  </div>
-  <script type="module" src="./main.js"></script>
-</body>
-
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>
