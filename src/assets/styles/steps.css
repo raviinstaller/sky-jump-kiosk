@@ -20,35 +20,43 @@
 }
 
 .steps-group.step-1::before {
-  background-image: linear-gradient(to right,
-      #ffffff 0%,
-      #ffffff 50%,
-      #ffffff 50%,
-      #ffffff 100%);
+  background-image: linear-gradient(
+    to right,
+    #ffffff 0%,
+    #ffffff 50%,
+    #ffffff 50%,
+    #ffffff 100%
+  );
 }
 
 .steps-group.step-2::before {
-  background-image: linear-gradient(to right,
-      #ffffff 0%,
-      #ffffff 50%,
-      #023760 50%,
-      #023760 100%);
+  background-image: linear-gradient(
+    to right,
+    #ffffff 0%,
+    #ffffff 50%,
+    #023760 50%,
+    #023760 100%
+  );
 }
 
 .steps-group.step-3::before {
-  background-image: linear-gradient(to right,
-      #023760 0%,
-      #023760 50%,
-      #023760 50%,
-      #023760 100%);
+  background-image: linear-gradient(
+    to right,
+    #ffffff 0%,
+    #ffffff 50%,
+    #023760 50%,
+    #023760 100%
+  );
 }
 
 .steps-group.step-4::before {
-  background-image: linear-gradient(to right,
-      #023760 0%,
-      #023760 50%,
-      #023760 50%,
-      #023760 100%);
+  background-image: linear-gradient(
+    to right,
+    #023760 0%,
+    #023760 50%,
+    #023760 50%,
+    #023760 100%
+  );
 }
 
 .steps-group.step-1 .step-item:nth-child(2) .step-item-number,

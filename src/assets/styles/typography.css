@@ -239,6 +239,9 @@
 .max-w-400 {
   max-width: 400px;
 }
+.max-w-60-percent {
+  max-width: 60%;
+}
 
 .max-w-838 {
   max-width: 838px;
