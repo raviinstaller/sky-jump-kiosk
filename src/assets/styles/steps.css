@@ -1,82 +1,64 @@
+/* ===============================
+   STEPS CONTAINER
+=============================== */
 .steps-group {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  width: 100%;
   max-width: 700px;
+  width: 100%;
   position: relative;
+  direction: rtl;
 }
 
+/* ===============================
+   BASE LINE (FULL)
+=============================== */
 .steps-group::before {
   content: "";
-  height: 3px;
-  width: 80%;
-  background-color: #ffffff;
   position: absolute;
   top: 35px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 36px; /* start from first step (RTL) */
+  width: calc(100% - 72px);
+  height: 3px;
+  background-color: #ffffff;
   z-index: -1;
 }
 
-.steps-group.step-1::before {
-  background-image: linear-gradient(
-    to right,
-    #ffffff 0%,
-    #ffffff 50%,
-    #ffffff 50%,
-    #ffffff 100%
-  );
+/* ===============================
+   PROGRESS LINE
+=============================== */
+.steps-group::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  right: 36px;
+  width: calc(100% - 72px);
+  height: 3px;
+  background-color: #023760;
+  transform-origin: right center;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  z-index: -1;
 }
 
-.steps-group.step-2::before {
-  background-image: linear-gradient(
-    to right,
-    #ffffff 0%,
-    #ffffff 50%,
-    #023760 50%,
-    #023760 100%
-  );
+/* ===============================
+   STEP PROGRESS (4 steps → 3 gaps)
+=============================== */
+.steps-group.step-2::after {
+  transform: scaleX(0.33);
 }
 
-.steps-group.step-3::before {
-  background-image: linear-gradient(
-    to right,
-    #ffffff 0%,
-    #ffffff 50%,
-    #023760 50%,
-    #023760 100%
-  );
+.steps-group.step-3::after {
+  transform: scaleX(0.66);
 }
 
-.steps-group.step-4::before {
-  background-image: linear-gradient(
-    to right,
-    #023760 0%,
-    #023760 50%,
-    #023760 50%,
-    #023760 100%
-  );
+.steps-group.step-4::after {
+  transform: scaleX(1);
 }
 
-.steps-group.step-1 .step-item:nth-child(2) .step-item-number,
-.steps-group.step-1 .step-item:nth-child(3) .step-item-number,
-.steps-group.step-1 .step-item:nth-child(4) .step-item-number {
-  background-image: linear-gradient(to top, #ffffff, #ffffff);
-  color: var(--color-text-primary);
-}
-
-.steps-group.step-2 .step-item:nth-child(3) .step-item-number,
-.steps-group.step-2 .step-item:nth-child(4) .step-item-number {
-  background-image: linear-gradient(to top, #ffffff, #ffffff);
-  color: var(--color-text-primary);
-}
-
-.steps-group.step-3 .step-item:nth-child(4) .step-item-number {
-  background-image: linear-gradient(to top, #ffffff, #ffffff);
-  color: var(--color-text-primary);
-}
-
+/* ===============================
+   STEP ITEM
+=============================== */
 .step-item {
   display: flex;
   flex-direction: column;
@@ -84,20 +66,37 @@
   gap: 16px;
 }
 
+/* ===============================
+   STEP NUMBER
+=============================== */
 .step-item-number {
   height: 72px;
   width: 72px;
   border-radius: 50%;
-  background-color: var(--color-secondary);
-  background-image: linear-gradient(to top, #001f2c, #004c8c, #00375f);
+  background: #ffffff;
+  color: var(--color-text-primary);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: var(--size-md);
   font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+/* ===============================
+   ACTIVE STEPS
+=============================== */
+.steps-group.step-1 .step-item:nth-child(1) .step-item-number,
+.steps-group.step-2 .step-item:nth-child(-n + 2) .step-item-number,
+.steps-group.step-3 .step-item:nth-child(-n + 3) .step-item-number,
+.steps-group.step-4 .step-item:nth-child(-n + 4) .step-item-number {
+  background-image: linear-gradient(to top, #001f2c, #004c8c, #00375f);
   color: #ffffff;
 }
 
+/* ===============================
+   STEP TITLE
+=============================== */
 .step-item-title {
   font-size: var(--size-md);
   font-weight: 700;
