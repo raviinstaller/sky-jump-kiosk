@@ -9,7 +9,7 @@
   <body>
     <div class="cloud-layer"></div>
 
-    <div class="main">
+    <div class="main" style="padding-top: 0">
       <div class="app-logo"></div>
       <div class="steps-group step-1">
         <div class="step-item">
@@ -30,7 +30,7 @@
         </div>
       </div>
       <div>
-        <h2 class="text-6xl">מילוי פרטי קופצים</h2>
+        <h2 class="text-6xl text-color-gradient">מילוי פרטי קופצים</h2>
         <p class="text-lg mt-3 text-center text-semibold font-assistant">
           יש למלא את פרטי המבוגר / ההורה:
         </p>
@@ -184,76 +184,78 @@
           <h2 class="child-title">ילדים בחזקתי מתחת לגיל 18</h2>
         </div>
 
-        <div class="form-row items-end">
-          <div class="delete-col">
-            <button type="button" class="delete-btn">
-              <svg
-                width="31"
-                height="31"
-                viewBox="0 0 31 31"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+        <div class="scrollbar_details_form">
+          <div class="form-row items-end">
+            <div class="delete-col">
+              <button type="button" class="delete-btn">
+                <svg
+                  width="31"
+                  height="31"
+                  viewBox="0 0 31 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.31394 26.5264V7.57902H5.05078V5.05271H11.3666V3.78955H18.9455V5.05271H25.2613V7.57902H23.9981V26.5264H6.31394ZM8.84025 24.0001H21.4718V7.57902H8.84025V24.0001ZM11.3666 21.4738H13.8929V10.1053H11.3666V21.4738ZM16.4192 21.4738H18.9455V10.1053H16.4192V21.4738Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="input-group">
+              <label
+                >תאריך לידה
+                <span class="sub-label">(הפעילות מעל גיל 3)</span></label
               >
-                <path
-                  d="M6.31394 26.5264V7.57902H5.05078V5.05271H11.3666V3.78955H18.9455V5.05271H25.2613V7.57902H23.9981V26.5264H6.31394ZM8.84025 24.0001H21.4718V7.57902H8.84025V24.0001ZM11.3666 21.4738H13.8929V10.1053H11.3666V21.4738ZM16.4192 21.4738H18.9455V10.1053H16.4192V21.4738Z"
-                  fill="white"
-                />
-              </svg>
-            </button>
-          </div>
+              <input dir="rtl" type="text" class="keyboard-input" />
+            </div>
 
-          <div class="input-group">
-            <label
-              >תאריך לידה
-              <span class="sub-label">(הפעילות מעל גיל 3)</span></label
-            >
-            <input dir="rtl" type="text" class="keyboard-input" />
-          </div>
+            <div class="input-group">
+              <label>שם משפחה</label>
+              <input dir="rtl" type="text" class="keyboard-input" />
+            </div>
 
-          <div class="input-group">
-            <label>שם משפחה</label>
-            <input dir="rtl" type="text" class="keyboard-input" />
+            <div class="input-group">
+              <label>שם פרטי</label>
+              <input dir="rtl" type="text" class="keyboard-input" />
+            </div>
           </div>
+          <div class="form-row items-end mt-32">
+            <div class="delete-col">
+              <button type="button" class="delete-btn">
+                <svg
+                  width="31"
+                  height="31"
+                  viewBox="0 0 31 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.31394 26.5264V7.57902H5.05078V5.05271H11.3666V3.78955H18.9455V5.05271H25.2613V7.57902H23.9981V26.5264H6.31394ZM8.84025 24.0001H21.4718V7.57902H8.84025V24.0001ZM11.3666 21.4738H13.8929V10.1053H11.3666V21.4738ZM16.4192 21.4738H18.9455V10.1053H16.4192V21.4738Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
 
-          <div class="input-group">
-            <label>שם פרטי</label>
-            <input dir="rtl" type="text" class="keyboard-input" />
-          </div>
-        </div>
-        <div class="form-row items-end mt-32">
-          <div class="delete-col">
-            <button type="button" class="delete-btn">
-              <svg
-                width="31"
-                height="31"
-                viewBox="0 0 31 31"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+            <div class="input-group">
+              <label
+                >תאריך לידה
+                <span class="sub-label">(הפעילות מעל גיל 3)</span></label
               >
-                <path
-                  d="M6.31394 26.5264V7.57902H5.05078V5.05271H11.3666V3.78955H18.9455V5.05271H25.2613V7.57902H23.9981V26.5264H6.31394ZM8.84025 24.0001H21.4718V7.57902H8.84025V24.0001ZM11.3666 21.4738H13.8929V10.1053H11.3666V21.4738ZM16.4192 21.4738H18.9455V10.1053H16.4192V21.4738Z"
-                  fill="white"
-                />
-              </svg>
-            </button>
-          </div>
+              <input dir="rtl" type="text" class="keyboard-input" />
+            </div>
 
-          <div class="input-group">
-            <label
-              >תאריך לידה
-              <span class="sub-label">(הפעילות מעל גיל 3)</span></label
-            >
-            <input dir="rtl" type="text" class="keyboard-input" />
-          </div>
+            <div class="input-group">
+              <label>שם משפחה</label>
+              <input dir="rtl" type="text" class="keyboard-input" />
+            </div>
 
-          <div class="input-group">
-            <label>שם משפחה</label>
-            <input dir="rtl" type="text" class="keyboard-input" />
-          </div>
-
-          <div class="input-group">
-            <label>שם פרטי</label>
-            <input dir="rtl" type="text" class="keyboard-input" />
+            <div class="input-group">
+              <label>שם פרטי</label>
+              <input dir="rtl" type="text" class="keyboard-input" />
+            </div>
           </div>
         </div>
       </div>
