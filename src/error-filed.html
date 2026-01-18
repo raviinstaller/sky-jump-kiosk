@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <title>Details form</title>
+  </head>
+  <body>
+    <div class="cloud-layer"></div>
+
+    <div class="main" style="padding-top: 0">
+      <div class="app-logo"></div>
+      <div class="steps-group step-1">
+        <div class="step-item">
+          <div class="step-item-number">01</div>
+          <div class="step-item-title">מילוי פרטים</div>
+        </div>
+        <div class="step-item">
+          <div class="step-item-number">02</div>
+          <div class="step-item-title">בחירת כרטיסים</div>
+        </div>
+        <div class="step-item">
+          <div class="step-item-number">03</div>
+          <div class="step-item-title">תשלום</div>
+        </div>
+        <div class="step-item">
+          <div class="step-item-number">04</div>
+          <div class="step-item-title">אישור הזמנה</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-6xl text-color-gradient">מילוי פרטי קופצים</h2>
+        <p class="text-lg mt-3 text-center text-semibold font-assistant">
+          יש למלא את פרטי המבוגר / ההורה:
+        </p>
+      </div>
+      <form
+        action="/submit-your-endpoint"
+        method="POST"
+        class="form-card content-container parent-card"
+      >
+        <div class="form-row">
+          <div class="input-group">
+            <label for="first-name">שם פרטי הורה</label>
+            <input
+              type="text"
+              id="first-name"
+              name="first_name"
+              class="keyboard-input"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="last-name">שם משפחה</label>
+            <input
+              type="text"
+              id="last-name"
+              name="last_name"
+              class="keyboard-input"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="id-number">תעודת זהות</label>
+            <div class="custom-select" id="id-type-select">
+              <div class="custom-select-trigger">
+                <span class="selected-text">בחר סוג תעודה</span>
+              </div>
+              <div class="custom-select-options">
+                <div class="custom-select-option" data-value="israeli">
+                  תעודת זהות ישראלית
+                </div>
+                <div class="custom-select-option" data-value="passport">
+                  דרכון
+                </div>
+                <div class="custom-select-option" data-value="temp">
+                  תעודה זמנית
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="email">אימייל</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="keyboard-input"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="city">עיר</label>
+            <input type="text" id="city" name="city" class="keyboard-input" />
+          </div>
+          <div class="input-group error">
+            <label for="phone">טלפון</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="keyboard-input"
+              required
+            />
+            <p class="text-error">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.8843 2.532C12.5383 1.878 11.4623 1.878 11.1163 2.532L2.11627 19.532C2.03556 19.6844 1.99564 19.8551 2.00038 20.0275C2.00512 20.1999 2.05437 20.3681 2.14333 20.5159C2.2323 20.6636 2.35796 20.7858 2.50812 20.8707C2.65827 20.9555 2.82781 21.0001 3.00027 21H21.0003C21.1727 21.0004 21.3423 20.956 21.4925 20.8713C21.6428 20.7866 21.7685 20.6644 21.8574 20.5167C21.9463 20.3689 21.9955 20.2006 22 20.0282C22.0045 19.8559 21.9643 19.6852 21.8833 19.533L12.8843 2.532ZM13.0003 18H11.0003V16H13.0003V18ZM11.0003 14V9H13.0003L13.0013 14H11.0003Z"
+                  fill="#FE9595"
+                />
+              </svg>
+              שגיאה
+            </p>
+          </div>
+        </div>
+        <div class="form-row flex-row-reverse items-end">
+          <div dir="ltr">
+            <p class="details-feeling-desc">
+              אישור קבלת דיוור שיווקי (מבטיחים לא להציק 😉)
+            </p>
+            <p class="details-feeling-desc flex items-center gap-15 mt-4">
+              כן, שלחו לי הטבות ומבצעים שווים ב-SMS ודוא"ל
+              <span>
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="39"
+                    height="39"
+                    rx="7.5"
+                    fill="#FF9800"
+                  />
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="39"
+                    height="39"
+                    rx="7.5"
+                    stroke="white"
+                  />
+                  <path
+                    d="M17.0002 24.1701L12.8302 20.0001L11.4102 21.4101L17.0002 27.0001L29.0002 15.0001L27.5902 13.5901L17.0002 24.1701Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+            </p>
+          </div>
+          <div class="input-group">
+            <label>תאריך לידה הורה</label>
+            <input dir="rtl" type="tel" class="keyboard-input" />
+          </div>
+        </div>
+      </form>
+      <div dir="ltr" class="form-card content-container child-card mt-20">
+        <div class="child-header">
+          <button type="button" class="add-child-btn">
+            הוספת ילד
+            <span
+              ><svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.661 15.3333L8.66016 8.34672L8.661 2"
+                  stroke="white"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M1.9987 8.66441L8.98531 8.66357L15.332 8.66441"
+                  stroke="white"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+          </button>
+          <h2 class="child-title">ילדים בחזקתי מתחת לגיל 18</h2>
+        </div>
+
+        <div class="scrollbar_details_form">
+          <div class="form-row items-end">
+            <div class="delete-col">
+              <button type="button" class="delete-btn">
+                <svg
+                  width="31"
+                  height="31"
+                  viewBox="0 0 31 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.31394 26.5264V7.57902H5.05078V5.05271H11.3666V3.78955H18.9455V5.05271H25.2613V7.57902H23.9981V26.5264H6.31394ZM8.84025 24.0001H21.4718V7.57902H8.84025V24.0001ZM11.3666 21.4738H13.8929V10.1053H11.3666V21.4738ZM16.4192 21.4738H18.9455V10.1053H16.4192V21.4738Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="input-group">
+              <label
+                >תאריך לידה
+                <span class="sub-label">(הפעילות מעל גיל 3)</span></label
+              >
+              <input dir="rtl" type="text" class="keyboard-input" />
+            </div>
+
+            <div class="input-group">
+              <label>שם משפחה</label>
+              <input dir="rtl" type="text" class="keyboard-input" />
+            </div>
+
+            <div class="input-group">
+              <label>שם פרטי</label>
+              <input dir="rtl" type="text" class="keyboard-input" />
+            </div>
+          </div>
+          <div class="form-row items-end mt-32">
+            <div class="delete-col">
+              <button type="button" class="delete-btn">
+                <svg
+                  width="31"
+                  height="31"
+                  viewBox="0 0 31 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.31394 26.5264V7.57902H5.05078V5.05271H11.3666V3.78955H18.9455V5.05271H25.2613V7.57902H23.9981V26.5264H6.31394ZM8.84025 24.0001H21.4718V7.57902H8.84025V24.0001ZM11.3666 21.4738H13.8929V10.1053H11.3666V21.4738ZM16.4192 21.4738H18.9455V10.1053H16.4192V21.4738Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="input-group">
+              <label
+                >תאריך לידה
+                <span class="sub-label">(הפעילות מעל גיל 3)</span></label
+              >
+              <input dir="rtl" type="text" class="keyboard-input" />
+            </div>
+
+            <div class="input-group">
+              <label>שם משפחה</label>
+              <input dir="rtl" type="text" class="keyboard-input" />
+            </div>
+
+            <div class="input-group">
+              <label>שם פרטי</label>
+              <input dir="rtl" type="text" class="keyboard-input" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-shape"></div>
+      <div class="btn-box">
+        <button class="orange-btn has-left-icon outer-border-left">המשך</button>
+        <button class="blue-btn outer-border-right">
+          חזרה
+          <img
+            class="relative z-10"
+            src="/assets/images/right-blue-arrow.png"
+            alt="left arrow"
+          />
+        </button>
+      </div>
+    </div>
+
+    <!-- Custom Keyboard -->
+    <div class="keyboard-text-container">
+      <!-- Close button -->
+      <button class="close-btn" onclick="submitOk()">✕</button>
+
+      <!-- Numbers -->
+      <div class="keyboard-text-row">
+        <button class="data-number" onclick="addCharX('1')">1</button>
+        <button class="data-number" onclick="addCharX('2')">2</button>
+        <button class="data-number" onclick="addCharX('3')">3</button>
+        <button class="data-number" onclick="addCharX('4')">4</button>
+        <button class="data-number" onclick="addCharX('5')">5</button>
+        <button class="data-number" onclick="addCharX('6')">6</button>
+        <button class="data-number" onclick="addCharX('7')">7</button>
+        <button class="data-number" onclick="addCharX('8')">8</button>
+        <button class="data-number" onclick="addCharX('9')">9</button>
+        <button class="data-number" onclick="addCharX('0')">0</button>
+      </div>
+
+      <!-- Hebrew Row 1 -->
+      <div class="keyboard-text-row">
+        <button class="data-number" onclick="addCharX('ק')">ק</button>
+        <button class="data-number" onclick="addCharX('ר')">ר</button>
+        <button class="data-number" onclick="addCharX('א')">א</button>
+        <button class="data-number" onclick="addCharX('ט')">ט</button>
+        <button class="data-number" onclick="addCharX('ו')">ו</button>
+        <button class="data-number" onclick="addCharX('ן')">ן</button>
+        <button class="data-number" onclick="addCharX('ם')">ם</button>
+        <button class="data-number" onclick="addCharX('פ')">פ</button>
+      </div>
+
+      <!-- Hebrew Row 2 -->
+      <div class="keyboard-text-row">
+        <button class="data-number" onclick="addCharX('ש')">ש</button>
+        <button class="data-number" onclick="addCharX('ד')">ד</button>
+        <button class="data-number" onclick="addCharX('ג')">ג</button>
+        <button class="data-number" onclick="addCharX('כ')">כ</button>
+        <button class="data-number" onclick="addCharX('ע')">ע</button>
+        <button class="data-number" onclick="addCharX('י')">י</button>
+        <button class="data-number" onclick="addCharX('ח')">ח</button>
+        <button class="data-number" onclick="addCharX('ל')">ל</button>
+        <button class="data-number" onclick="addCharX('ך')">ך</button>
+        <button class="data-number" onclick="addCharX('ף')">ף</button>
+      </div>
+
+      <!-- Hebrew Row 3 -->
+      <div class="keyboard-text-row">
+        <button class="data-number" onclick="addCharX('ז')">ז</button>
+        <button class="data-number" onclick="addCharX('ס')">ס</button>
+        <button class="data-number" onclick="addCharX('ב')">ב</button>
+        <button class="data-number" onclick="addCharX('ה')">ה</button>
+        <button class="data-number" onclick="addCharX('נ')">נ</button>
+        <button class="data-number" onclick="addCharX('מ')">מ</button>
+        <button class="data-number" onclick="addCharX('צ')">צ</button>
+        <button class="data-number" onclick="addCharX('ת')">ת</button>
+        <button class="data-number" onclick="addCharX('ץ')">ץ</button>
+      </div>
+
+      <!-- Actions -->
+      <div class="keyboard-text-row actions">
+        <button class="data-number data-space" onclick="addCharX(' ')"></button>
+        <button class="data-number data-delete" onclick="deleteChar()">
+          ⌫
+        </button>
+        <button class="data-number data-ok" onclick="submitOk()">שמירה</button>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        let currentInput = null;
+
+        const keyboard = document.querySelector(".keyboard-text-container");
+        const allInputs = document.querySelectorAll(".keyboard-input");
+
+        function showKeyboard(input) {
+          currentInput = input;
+          keyboard.classList.add("is-open");
+          moveCaretToEnd(input);
+        }
+
+        function hideKeyboard() {
+          keyboard.classList.remove("is-open");
+          if (currentInput) currentInput.blur();
+          currentInput = null;
+        }
+
+        function moveCaretToEnd(input) {
+          input.focus();
+          const val = input.value;
+          input.value = "";
+          input.value = val;
+        }
+
+        /* ===== GLOBAL FUNCTIONS USED IN HTML ===== */
+
+        window.addCharX = function (val) {
+          if (!currentInput) return;
+          currentInput.value += val;
+          moveCaretToEnd(currentInput);
+        };
+
+        window.deleteChar = function () {
+          if (!currentInput) return;
+          currentInput.value = currentInput.value.slice(0, -1);
+          moveCaretToEnd(currentInput);
+        };
+
+        window.submitOk = function () {
+          hideKeyboard();
+        };
+
+        /* ===== INIT ===== */
+
+        document.addEventListener("DOMContentLoaded", function () {
+          if (!keyboard) return;
+
+          // Attach keyboard to all inputs with class 'keyboard-input'
+          allInputs.forEach((input) => {
+            input.addEventListener("focus", () => showKeyboard(input));
+            input.addEventListener("click", () => showKeyboard(input));
+          });
+        });
+      })();
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const select = document.getElementById("id-type-select");
+        const trigger = select.querySelector(".custom-select-trigger");
+        const options = select.querySelectorAll(".custom-select-option");
+        const selectedText = select.querySelector(".selected-text");
+
+        // open close dropdown
+        trigger.addEventListener("click", () => {
+          select.classList.toggle("open");
+        });
+
+        // option click
+        options.forEach((option) => {
+          option.addEventListener("click", () => {
+            options.forEach((o) => o.classList.remove("selected"));
+            option.classList.add("selected");
+
+            selectedText.textContent = option.textContent;
+            select.classList.remove("open");
+          });
+        });
+
+        // close when clicking outside
+        document.addEventListener("click", (e) => {
+          if (!select.contains(e.target)) {
+            select.classList.remove("open");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

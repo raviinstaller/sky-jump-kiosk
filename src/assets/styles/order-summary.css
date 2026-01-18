@@ -1,104 +1,128 @@
 .summary-table {
-    background-color: var(--white-color);
-    border-radius: 28px;
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 10px;
-    overflow: hidden;
-    padding: 24px 30px 18px 30px;
-    border: none;
+  background-color: var(--white-color);
+  border-radius: 28px;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  overflow: hidden;
+  padding: 24px 30px 18px 30px;
+  border: none;
 }
 
 .summary-table th,
 .summary-table th span {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: var(--line-height-sm);
-    color: var(--color-blue-700);
-    padding: 0px 10px 25px 10px;
-    text-align: start;
-    border: none;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: var(--line-height-sm);
+  color: var(--color-blue-700);
+  padding: 0px 10px 25px 10px;
+  text-align: start;
+  border: none;
 }
 
 .summary-table td,
 .summary-table td span {
-    font-size: 28px;
-    font-weight: 400;
-    color: var(--color-blue-700);
-    padding: 6px 10px;
-    text-align: start;
-    font-family: "Assistant", sans-serif;
-    border: none;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--color-blue-700);
+  padding: 6px 10px;
+  text-align: start;
+  font-family: "Assistant", sans-serif;
+  border: none;
 }
 
 .summary-table td span {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .summary-table thead tr th {
-    border-bottom: 20px solid transparent;
+  border-bottom: 20px solid transparent;
 }
 
 .total-amount {
-    font-family: "Assistant", sans-serif;
-    font-weight: 700;
-    font-size: 44px;
-    line-height: var(--line-height-sm);
-    color: var(--color-text-primary);
+  font-family: "Assistant", sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: var(--line-height-sm);
+  color: var(--color-text-primary);
 }
 
 .total-label {
-    font-weight: 600;
-    font-size: 28px;
-    line-height: var(--line-height-sm);
-    font-family: "Assistant", sans-serif;
-    color: var(--color-text-primary);
+  font-weight: 600;
+  font-size: 28px;
+  line-height: var(--line-height-sm);
+  font-family: "Assistant", sans-serif;
+  color: var(--color-text-primary);
 }
 
 .promo-form {
-    display: flex;
-    align-items: flex-end;
-    gap: 20px;
-    width: 100%;
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  width: 100%;
 }
 
 .input-wrapper {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 12px;
 }
 
 .input-wrapper label {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 100%;
-    color: var(--white-color);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  color: var(--white-color);
 }
 
 .input-wrapper input {
-    height: 70px;
-    border-radius: 16px;
-    border: 1px solid var(--color-input-border);
-    padding: 0 20px;
-    font-size: 24px;
-    outline: none;
-    width: 100%;
+  height: 70px;
+  border-radius: 16px;
+  border: 1px solid var(--color-input-border);
+  padding: 0 20px;
+  font-size: 24px;
+  outline: none;
+  width: 100%;
 }
 
 .orange-submit-btn {
-    font-family: 'Assistant', sans-serif;
-    padding: 18px 89px;
-    border-radius: 24px;
-    border: none;
-    background-color: var(--color-primary);
-    color: var(--white-color);
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 95%;
-
+  font-family: "Assistant", sans-serif;
+  padding: 18px 89px;
+  border-radius: 24px;
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 95%;
 }
 
 .orange-submit-btn:hover {
-    opacity: 0.9;
+  opacity: 0.9;
+}
+.error_code,
+.success_code {
+  position: relative !important;
+}
+.error_code input {
+  border: 2px solid #ee1c1c !important;
+}
+.error_code .error_text {
+  position: absolute;
+  color: red;
+  left: 15px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.success_code .success_text {
+  position: absolute;
+  color: #013d6c;
+  left: 15px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
