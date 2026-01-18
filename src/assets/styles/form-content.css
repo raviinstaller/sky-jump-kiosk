@@ -1,5 +1,6 @@
 .jump-approval-texts {
-  max-height: 600px;
+  padding-left: 10px;
+  max-height: 300px;
   overflow-y: auto;
 }
 .jump-approval-texts p {
@@ -36,7 +37,7 @@
   background-color: white;
   border-radius: 16px;
   padding: 12px;
-  height: 280px;
+  height: 140px;
   position: relative;
 }
 .signature-box button {
