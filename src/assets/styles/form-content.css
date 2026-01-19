@@ -29,15 +29,13 @@
 }
 
 .signature-box {
-  max-width: 556px;
-  margin: auto;
-  width: 100%;
+  width: 95%;
 }
 .signature-box div {
   background-color: white;
-  border-radius: 16px;
+  border-radius: 26px;
   padding: 12px;
-  height: 140px;
+  height: 1150px;
   position: relative;
 }
 .signature-box button {
