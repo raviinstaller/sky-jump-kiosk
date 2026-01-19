@@ -1,94 +1,26 @@
 <!doctype html>
-<html lang="he" dir="rtl">
+<html lang="en" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/main.css" />
-    <title>Order Summary</title>
+    <title>Details form</title>
   </head>
+
   <body>
     <div class="cloud-layer"></div>
 
-    <div class="main">
-      <div class="app-logo"></div>
-      <div class="steps-group step-2">
-        <div class="step-item">
-          <div class="step-item-number">01</div>
-          <div class="step-item-title">מילוי פרטים</div>
-        </div>
-        <div class="step-item">
-          <div class="step-item-number">02</div>
-          <div class="step-item-title">בחירת כרטיסים</div>
-        </div>
-        <div class="step-item">
-          <div class="step-item-number">03</div>
-          <div class="step-item-title">תשלום</div>
-        </div>
-        <div class="step-item">
-          <div class="step-item-number">04</div>
-          <div class="step-item-title">אישור הזמנה</div>
-        </div>
-      </div>
-      <h2 class="text-6xl text-color-gradient">סיכום הזמנה</h2>
-      <div class="content-container">
-        <table class="summary-table">
-          <thead>
-            <tr>
-              <th>פירוט הכרטיסים</th>
-              <th>סוג</th>
-              <th>כמות הכרטיסים</th>
-              <th>מחיר</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>קופץ מעל גיל 6</td>
-              <td>קופץ מעל גיל 6</td>
-              <td>2</td>
-              <td><span>80 ₪</span></td>
-            </tr>
-            <tr>
-              <td>קופץ מעל גיל 6</td>
-              <td>גרביים</td>
-              <td>2</td>
-              <td><span>80 ₪</span></td>
-            </tr>
-          </tbody>
-        </table>
-        <div
-          class="content-container content-container-white total-container flex-row-reverse justify-between"
-        >
-          <div class="total-amount">160 ₪</div>
-          <div class="total-label">סה"כ לתשלום</div>
-        </div>
-      </div>
-      <div class="content-container">
-        <div class="promo-section-container">
-          <form class="promo-form">
-            <div class="input-wrapper">
-              <label for="promo-code">קוד הנחה / קופון</label>
-              <input type="text" id="promo-code" class="keyboard-input" />
-            </div>
+    <div class="input-group">
+      <label for="first-name">שם פרטי הורה</label>
+      <input
+        type="text"
+        id="first-name"
+        name="first_name"
+        class="keyboard-input"
+        required
+      />
+    </div>
 
-            <button type="submit" class="orange-submit-btn">הוספה</button>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="footer">
-      <div class="footer-shape"></div>
-      <div class="btn-box">
-        <button class="orange-btn has-left-icon outer-border-left">המשך</button>
-        <button class="blue-btn outer-border-right">
-          חזרה
-          <img
-            class="relative z-10"
-            src="/assets/images/right-blue-arrow.png"
-            alt="left arrow"
-          />
-        </button>
-      </div>
-    </div>
     <!-- ================= CUSTOM KEYBOARD ================= -->
     <div class="keyboard-text-container">
       <button class="close-btn" onclick="submitOk()">✕</button>
@@ -159,6 +91,7 @@
         <button class="data-number data-ok" onclick="submitOk()">שמירה</button>
       </div>
     </div>
+
     <!-- ================= SCRIPT ================= -->
     <script>
       (function () {
@@ -196,6 +129,8 @@
               btn.onclick = () => addCharX(val);
             });
           });
+
+          document.documentElement.dir = currentLang === "he" ? "ltr" : "ltr";
         }
 
         window.toggleLang = function () {

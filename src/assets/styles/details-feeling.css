@@ -170,7 +170,7 @@
   font-weight: 600;
 }
 .scrollbar_details_form {
-  max-height: 100px;
+  max-height: 110px;
   overflow-y: auto;
   padding-right: 10px;
 }
