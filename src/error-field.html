@@ -289,91 +289,130 @@
         </button>
       </div>
     </div>
-
-    <!-- Custom Keyboard -->
+    <!-- ================= CUSTOM KEYBOARD ================= -->
     <div class="keyboard-text-container">
-      <!-- Close button -->
       <button class="close-btn" onclick="submitOk()">✕</button>
 
-      <!-- Numbers -->
+      <!-- NUMBERS (STATIC - NEVER TOUCHED) -->
       <div class="keyboard-text-row">
-        <button class="data-number" onclick="addCharX('1')">1</button>
-        <button class="data-number" onclick="addCharX('2')">2</button>
-        <button class="data-number" onclick="addCharX('3')">3</button>
-        <button class="data-number" onclick="addCharX('4')">4</button>
-        <button class="data-number" onclick="addCharX('5')">5</button>
-        <button class="data-number" onclick="addCharX('6')">6</button>
-        <button class="data-number" onclick="addCharX('7')">7</button>
-        <button class="data-number" onclick="addCharX('8')">8</button>
-        <button class="data-number" onclick="addCharX('9')">9</button>
-        <button class="data-number" onclick="addCharX('0')">0</button>
+        <button class="data-number key" data-key="1">1</button>
+        <button class="data-number key" data-key="2">2</button>
+        <button class="data-number key" data-key="3">3</button>
+        <button class="data-number key" data-key="4">4</button>
+        <button class="data-number key" data-key="5">5</button>
+        <button class="data-number key" data-key="6">6</button>
+        <button class="data-number key" data-key="7">7</button>
+        <button class="data-number key" data-key="8">8</button>
+        <button class="data-number key" data-key="9">9</button>
+        <button class="data-number key" data-key="0">0</button>
       </div>
 
-      <!-- Hebrew Row 1 -->
-      <div class="keyboard-text-row">
-        <button class="data-number" onclick="addCharX('ק')">ק</button>
-        <button class="data-number" onclick="addCharX('ר')">ר</button>
-        <button class="data-number" onclick="addCharX('א')">א</button>
-        <button class="data-number" onclick="addCharX('ט')">ט</button>
-        <button class="data-number" onclick="addCharX('ו')">ו</button>
-        <button class="data-number" onclick="addCharX('ן')">ן</button>
-        <button class="data-number" onclick="addCharX('ם')">ם</button>
-        <button class="data-number" onclick="addCharX('פ')">פ</button>
+      <!-- LETTER ROW 1 -->
+      <div class="keyboard-text-row lang-row">
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
       </div>
 
-      <!-- Hebrew Row 2 -->
-      <div class="keyboard-text-row">
-        <button class="data-number" onclick="addCharX('ש')">ש</button>
-        <button class="data-number" onclick="addCharX('ד')">ד</button>
-        <button class="data-number" onclick="addCharX('ג')">ג</button>
-        <button class="data-number" onclick="addCharX('כ')">כ</button>
-        <button class="data-number" onclick="addCharX('ע')">ע</button>
-        <button class="data-number" onclick="addCharX('י')">י</button>
-        <button class="data-number" onclick="addCharX('ח')">ח</button>
-        <button class="data-number" onclick="addCharX('ל')">ל</button>
-        <button class="data-number" onclick="addCharX('ך')">ך</button>
-        <button class="data-number" onclick="addCharX('ף')">ף</button>
+      <!-- LETTER ROW 2 -->
+      <div class="keyboard-text-row lang-row">
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
       </div>
 
-      <!-- Hebrew Row 3 -->
-      <div class="keyboard-text-row">
-        <button class="data-number" onclick="addCharX('ז')">ז</button>
-        <button class="data-number" onclick="addCharX('ס')">ס</button>
-        <button class="data-number" onclick="addCharX('ב')">ב</button>
-        <button class="data-number" onclick="addCharX('ה')">ה</button>
-        <button class="data-number" onclick="addCharX('נ')">נ</button>
-        <button class="data-number" onclick="addCharX('מ')">מ</button>
-        <button class="data-number" onclick="addCharX('צ')">צ</button>
-        <button class="data-number" onclick="addCharX('ת')">ת</button>
-        <button class="data-number" onclick="addCharX('ץ')">ץ</button>
+      <!-- LETTER ROW 3 -->
+      <div class="keyboard-text-row lang-row">
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
+        <button class="data-number key"></button>
       </div>
 
-      <!-- Actions -->
+      <!-- ACTIONS -->
       <div class="keyboard-text-row actions">
+        <button class="data-number" onclick="toggleLang()">🌐</button>
+
         <button class="data-number data-space" onclick="addCharX(' ')"></button>
+
         <button class="data-number data-delete" onclick="deleteChar()">
           ⌫
         </button>
+
         <button class="data-number data-ok" onclick="submitOk()">שמירה</button>
       </div>
     </div>
 
+    <!-- ================= SCRIPT ================= -->
     <script>
       (function () {
         let currentInput = null;
+        let currentLang = "he";
 
         const keyboard = document.querySelector(".keyboard-text-container");
         const allInputs = document.querySelectorAll(".keyboard-input");
 
+        const layouts = {
+          he: [
+            ["ק", "ר", "א", "ט", "ו", "ן", "ם", "פ"],
+            ["ש", "ד", "ג", "כ", "ע", "י", "ח", "ל", "ך", "ף"],
+            ["ז", "ס", "ב", "ה", "נ", "מ", "צ", "ת", "ץ"],
+          ],
+          en: [
+            ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
+            ["a", "s", "d", "f", "g", "h", "j", "k", "l", "@"],
+            ["z", "x", "c", "v", "b", "n", "m", ".", "_", "-"],
+          ],
+        };
+
+        function renderKeys() {
+          const rows = document.querySelectorAll(".lang-row");
+          const layout = layouts[currentLang];
+
+          rows.forEach((row, rowIndex) => {
+            const buttons = row.querySelectorAll(".key");
+            const rowKeys = layout[rowIndex] || [];
+
+            buttons.forEach((btn, i) => {
+              const val = rowKeys[i] || "";
+              btn.textContent = val;
+              btn.dataset.key = val;
+              btn.onclick = () => addCharX(val);
+            });
+          });
+        }
+
+        window.toggleLang = function () {
+          currentLang = currentLang === "he" ? "en" : "he";
+          renderKeys();
+        };
+
         function showKeyboard(input) {
           currentInput = input;
           keyboard.classList.add("is-open");
+          renderKeys();
           moveCaretToEnd(input);
         }
 
         function hideKeyboard() {
           keyboard.classList.remove("is-open");
-          if (currentInput) currentInput.blur();
           currentInput = null;
         }
 
@@ -384,10 +423,8 @@
           input.value = val;
         }
 
-        /* ===== GLOBAL FUNCTIONS USED IN HTML ===== */
-
         window.addCharX = function (val) {
-          if (!currentInput) return;
+          if (!currentInput || !val) return;
           currentInput.value += val;
           moveCaretToEnd(currentInput);
         };
@@ -402,48 +439,11 @@
           hideKeyboard();
         };
 
-        /* ===== INIT ===== */
-
-        document.addEventListener("DOMContentLoaded", function () {
-          if (!keyboard) return;
-
-          // Attach keyboard to all inputs with class 'keyboard-input'
-          allInputs.forEach((input) => {
-            input.addEventListener("focus", () => showKeyboard(input));
-            input.addEventListener("click", () => showKeyboard(input));
-          });
+        allInputs.forEach((input) => {
+          input.addEventListener("focus", () => showKeyboard(input));
+          input.addEventListener("click", () => showKeyboard(input));
         });
       })();
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const select = document.getElementById("id-type-select");
-        const trigger = select.querySelector(".custom-select-trigger");
-        const options = select.querySelectorAll(".custom-select-option");
-        const selectedText = select.querySelector(".selected-text");
-
-        // open close dropdown
-        trigger.addEventListener("click", () => {
-          select.classList.toggle("open");
-        });
-
-        // option click
-        options.forEach((option) => {
-          option.addEventListener("click", () => {
-            options.forEach((o) => o.classList.remove("selected"));
-            option.classList.add("selected");
-
-            selectedText.textContent = option.textContent;
-            select.classList.remove("open");
-          });
-        });
-
-        // close when clicking outside
-        document.addEventListener("click", (e) => {
-          if (!select.contains(e.target)) {
-            select.classList.remove("open");
-          }
-        });
-      });
     </script>
   </body>
 </html>
