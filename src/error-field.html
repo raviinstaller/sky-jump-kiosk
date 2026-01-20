@@ -129,36 +129,23 @@
             </p>
             <p class="details-feeling-desc flex items-center gap-15 mt-4">
               כן, שלחו לי הטבות ומבצעים שווים ב-SMS ודוא"ל
-              <span>
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+              <input type="checkbox" id="c4" class="check-input" />
+              <label for="c4" class="check-box">
+                <svg width="40" height="40" viewBox="0 0 40 40">
                   <rect
+                    class="box-bg"
                     x="0.5"
                     y="0.5"
                     width="39"
                     height="39"
                     rx="7.5"
-                    fill="#FF9800"
-                  />
-                  <rect
-                    x="0.5"
-                    y="0.5"
-                    width="39"
-                    height="39"
-                    rx="7.5"
-                    stroke="white"
                   />
                   <path
-                    d="M17.0002 24.1701L12.8302 20.0001L11.4102 21.4101L17.0002 27.0001L29.0002 15.0001L27.5902 13.5901L17.0002 24.1701Z"
-                    fill="white"
+                    class="box-tick"
+                    d="M17 24.17L12.83 20L11.41 21.41L17 27L29 15L27.59 13.59L17 24.17Z"
                   />
                 </svg>
-              </span>
+              </label>
             </p>
           </div>
           <div class="input-group">
@@ -444,6 +431,35 @@
           input.addEventListener("click", () => showKeyboard(input));
         });
       })();
+      document.addEventListener("DOMContentLoaded", () => {
+        const select = document.getElementById("id-type-select");
+        const trigger = select.querySelector(".custom-select-trigger");
+        const options = select.querySelectorAll(".custom-select-option");
+        const selectedText = select.querySelector(".selected-text");
+
+        // open close dropdown
+        trigger.addEventListener("click", () => {
+          select.classList.toggle("open");
+        });
+
+        // option click
+        options.forEach((option) => {
+          option.addEventListener("click", () => {
+            options.forEach((o) => o.classList.remove("selected"));
+            option.classList.add("selected");
+
+            selectedText.textContent = option.textContent;
+            select.classList.remove("open");
+          });
+        });
+
+        // close when clicking outside
+        document.addEventListener("click", (e) => {
+          if (!select.contains(e.target)) {
+            select.classList.remove("open");
+          }
+        });
+      });
     </script>
   </body>
 </html>
