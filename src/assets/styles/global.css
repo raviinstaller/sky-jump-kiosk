@@ -7,11 +7,12 @@
   gap: 50px;
   position: relative;
   z-index: 10;
+  padding-top: 0;
 }
 
 .app-logo {
-  height: 268px;
-  width: 310px;
+  height: 222px;
+  width: 257px;
   background-image: url("../images/logo.png");
   background-size: contain;
   background-position: center;

@@ -9,26 +9,28 @@
   <body>
     <div class="cloud-layer"></div>
     <div class="main">
-      <div class="app-logo"></div>
-      <div class="steps-group step-1">
-        <div class="step-item">
-          <div class="step-item-number">01</div>
-          <div class="step-item-title">מילוי פרטים</div>
-        </div>
-        <div class="step-item">
-          <div class="step-item-number">02</div>
-          <div class="step-item-title">בחירת כרטיסים</div>
-        </div>
-        <div class="step-item">
-          <div class="step-item-number">03</div>
-          <div class="step-item-title">תשלום</div>
-        </div>
-        <div class="step-item">
-          <div class="step-item-number">04</div>
-          <div class="step-item-title">אישור הזמנה</div>
+      <div class="w-full flex flex-col justify-center items-center">
+        <div class="app-logo"></div>
+        <div class="steps-group step-1">
+          <div class="step-item">
+            <div class="step-item-number">01</div>
+            <div class="step-item-title">מילוי פרטים</div>
+          </div>
+          <div class="step-item">
+            <div class="step-item-number">02</div>
+            <div class="step-item-title">בחירת כרטיסים</div>
+          </div>
+          <div class="step-item">
+            <div class="step-item-number">03</div>
+            <div class="step-item-title">תשלום</div>
+          </div>
+          <div class="step-item">
+            <div class="step-item-number">04</div>
+            <div class="step-item-title">אישור הזמנה</div>
+          </div>
         </div>
       </div>
-      <div style="height: 160px"></div>
+      <div style="height: 130px"></div>
       <div>
         <h2 class="text-6xl text-color-gradient">ברוכים הבאים לSKY JUMP</h2>
         <p
@@ -38,6 +40,8 @@
           ההזדהות של הבוגר/ההורה
         </p>
       </div>
+      <div style="height: 20px"></div>
+
       <form
         action="/submit-your-endpoint"
         method="POST"
@@ -51,7 +55,7 @@
         </label>
         <input
           placeholder="אנא הכנס קוד  "
-          class="w-full keyboard-input"
+          class="w-full keyboard-input text-lg text-start text-normal text-black"
           type="text"
           id="first-name"
           name="first_name"
@@ -63,7 +67,7 @@
       <div class="footer-shape"></div>
       <div class="btn-box">
         <button class="orange-btn has-left-icon outer-border-left">המשך</button>
-        <button class="blue-btn w-full outer-border-right">
+        <button class="blue-btn outer-border-right">
           חזרה
           <img
             class="relative z-10"
