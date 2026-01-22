@@ -107,6 +107,7 @@
 }
 .error_code input {
   border: 2px solid #ee1c1c !important;
+  color: #ee1c1c !important ;
 }
 .error_code .error_text {
   position: absolute;
