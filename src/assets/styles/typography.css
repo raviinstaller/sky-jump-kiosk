@@ -233,6 +233,10 @@
 .pb-30 {
   padding-bottom: 30px;
 }
+.pe-100 {
+  padding-right: 100px;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -274,4 +278,7 @@
   line-height: 140%;
   color: var(--color-text-primary);
   max-width: 700px;
+}
+.flex-grow-1 {
+  flex-grow: 1;
 }

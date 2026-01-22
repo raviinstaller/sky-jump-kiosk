@@ -44,15 +44,15 @@
 }
 
 .popup-sub-title {
-  font-weight: 400;
+  font-weight: 400 !important;
   padding-top: 8px;
   margin: 0 auto;
 }
 
 .orange-btn.has-left-icon::before {
   content: "";
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   background-image: url("/assets/images/left-arrow.png");
   background-repeat: no-repeat;
   background-size: contain;

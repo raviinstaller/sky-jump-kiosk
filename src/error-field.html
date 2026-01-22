@@ -65,22 +65,12 @@
           </div>
           <div class="input-group">
             <label for="id-number">תעודת זהות</label>
-            <div class="custom-select" id="id-type-select">
-              <div class="custom-select-trigger">
-                <span class="selected-text">בחר סוג תעודה</span>
-              </div>
-              <div class="custom-select-options">
-                <div class="custom-select-option" data-value="israeli">
-                  תעודת זהות ישראלית
-                </div>
-                <div class="custom-select-option" data-value="passport">
-                  דרכון
-                </div>
-                <div class="custom-select-option" data-value="temp">
-                  תעודה זמנית
-                </div>
-              </div>
-            </div>
+            <input
+              type="text"
+              id="id-number"
+              name="id"
+              class="keyboard-input"
+            />
           </div>
         </div>
         <div class="form-row">
@@ -96,7 +86,20 @@
           </div>
           <div class="input-group">
             <label for="city">עיר</label>
-            <input type="text" id="city" name="city" class="keyboard-input" />
+            <div class="custom-select" id="city">
+              <div class="custom-select-trigger">
+                <span class="selected-text">בחר סוג תעודה</span>
+              </div>
+              <div class="custom-select-options">
+                <div class="custom-select-option" data-value="tel-aviv">
+                  תל אביב
+                </div>
+                <div class="custom-select-option" data-value="jerusalem">
+                  ירושלים
+                </div>
+                <div class="custom-select-option" data-value="haifa">חיפה</div>
+              </div>
+            </div>
           </div>
           <div class="input-group error">
             <label for="phone">טלפון</label>
@@ -193,14 +196,15 @@
             <div class="delete-col">
               <button type="button" class="delete-btn">
                 <svg
-                  width="31"
-                  height="31"
-                  viewBox="0 0 31 31"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <rect width="48" height="48" rx="24" fill="#FF9800" />
                   <path
-                    d="M6.31394 26.5264V7.57902H5.05078V5.05271H11.3666V3.78955H18.9455V5.05271H25.2613V7.57902H23.9981V26.5264H6.31394ZM8.84025 24.0001H21.4718V7.57902H8.84025V24.0001ZM11.3666 21.4738H13.8929V10.1053H11.3666V21.4738ZM16.4192 21.4738H18.9455V10.1053H16.4192V21.4738Z"
+                    d="M15.1577 35.3684V16.4211H13.8945V13.8947H20.2103V12.6316H27.7893V13.8947H34.1051V16.4211H32.8419V35.3684H15.1577ZM17.684 32.8421H30.3156V16.4211H17.684V32.8421ZM20.2103 30.3158H22.7366V18.9474H20.2103V30.3158ZM25.263 30.3158H27.7893V18.9474H25.263V30.3158Z"
                     fill="white"
                   />
                 </svg>
@@ -208,7 +212,7 @@
             </div>
 
             <div class="input-group">
-              <label
+              <label class="text-nowrap"
                 >תאריך לידה
                 <span class="sub-label">(הפעילות מעל גיל 3)</span></label
               >
@@ -229,14 +233,15 @@
             <div class="delete-col">
               <button type="button" class="delete-btn">
                 <svg
-                  width="31"
-                  height="31"
-                  viewBox="0 0 31 31"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <rect width="48" height="48" rx="24" fill="#FF9800" />
                   <path
-                    d="M6.31394 26.5264V7.57902H5.05078V5.05271H11.3666V3.78955H18.9455V5.05271H25.2613V7.57902H23.9981V26.5264H6.31394ZM8.84025 24.0001H21.4718V7.57902H8.84025V24.0001ZM11.3666 21.4738H13.8929V10.1053H11.3666V21.4738ZM16.4192 21.4738H18.9455V10.1053H16.4192V21.4738Z"
+                    d="M15.1577 35.3684V16.4211H13.8945V13.8947H20.2103V12.6316H27.7893V13.8947H34.1051V16.4211H32.8419V35.3684H15.1577ZM17.684 32.8421H30.3156V16.4211H17.684V32.8421ZM20.2103 30.3158H22.7366V18.9474H20.2103V30.3158ZM25.263 30.3158H27.7893V18.9474H25.263V30.3158Z"
                     fill="white"
                   />
                 </svg>
@@ -244,7 +249,7 @@
             </div>
 
             <div class="input-group">
-              <label
+              <label class="text-nowrap"
                 >תאריך לידה
                 <span class="sub-label">(הפעילות מעל גיל 3)</span></label
               >
@@ -434,7 +439,7 @@
         });
       })();
       document.addEventListener("DOMContentLoaded", () => {
-        const select = document.getElementById("id-type-select");
+        const select = document.getElementById("city");
         const trigger = select.querySelector(".custom-select-trigger");
         const options = select.querySelectorAll(".custom-select-option");
         const selectedText = select.querySelector(".selected-text");

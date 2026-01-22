@@ -1,50 +1,50 @@
 .current-purchase-popup {
-    padding: 48px;
+  padding: 48px;
 }
 
 .current-purchase-popup .experience-content-container {
-    padding: 18px 24px;
+  padding: 18px 24px;
 }
 
 .current-purchase-popup .popup-box {
-    border-radius: 16px;
+  border-radius: 16px;
 }
 
 .current-purchase-popup-box {
-    max-width: none;
-    background-color: #F5F7F8;
+  max-width: none;
+  background-color: #f5f7f8;
 }
 
 .purchase-popup-desc {
-    margin-top: 24px;
-    margin-bottom: 32px;
-    font-weight: 400;
+  margin-top: 24px;
+  margin-bottom: 32px;
+  font-weight: 400;
 }
 
 .current-purchase-popup .middle-content {
-    font-family: "Assistant", sans-serif;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 110%;
-    color: var(--color-blue-700);
+  font-family: "Assistant", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 110%;
+  color: var(--color-blue-700);
 }
 
 .plus-minus-box {
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    background-color: var(--color-blue-700);
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: var(--color-blue-700);
 }
 
 .current-purchase-title {
-    font-family: "Assistant", sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 100%;
-    color: black;
-    margin-bottom: 10px;
+  font-family: "Assistant", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  color: var(--color-blue-700);
+  margin-bottom: 10px;
 }
 
 .purchase-btn {
-    margin-top: 32px;
+  margin-top: 32px;
 }

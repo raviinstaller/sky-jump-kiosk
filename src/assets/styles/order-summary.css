@@ -23,7 +23,7 @@
 .summary-table td,
 .summary-table td span {
   font-size: 28px;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--color-blue-700);
   padding: 6px 10px;
   text-align: start;
@@ -125,4 +125,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.order-summery-input {
+  font-size: 20px !important;
+  font-weight: 700;
 }

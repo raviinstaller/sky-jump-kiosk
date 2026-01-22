@@ -81,16 +81,13 @@
   font-weight: 400;
   opacity: 0.9;
 }
-
-.delete-btn {
-  background-color: transparent;
+.text-nowrap {
+  white-space: nowrap;
 }
 
 .delete-btn {
-  background-color: var(--color-primary);
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
+  background-color: transparent;
+  border: 0;
 }
 
 .custom-select {
