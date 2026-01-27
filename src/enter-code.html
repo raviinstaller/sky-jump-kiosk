@@ -8,16 +8,15 @@
     <style>
       .keyboard-container {
         background-color: #ebedf2;
-        padding: 60px;
+        padding: 80px;
         display: grid;
         gap: 16px;
         grid-template-columns: repeat(3, 1fr); /* first 3 rows */
         position: fixed;
         left: 0;
         right: 0;
-        bottom: 100%;
+        bottom: 0;
         z-index: 9999;
-
         transform: translateY(100%);
         opacity: 0;
         visibility: hidden;
@@ -40,14 +39,13 @@
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
-        bottom: 0;
       }
 
       .keyboard-container .data-number,
       .keyboard-container .data-operationTashlum {
         border: none;
         background-color: white;
-        padding: 30px;
+        padding: 20px;
         border-radius: 16px;
         font-size: 50px;
         font-weight: 600;
