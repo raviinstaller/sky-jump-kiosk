@@ -212,12 +212,26 @@
         function showKeyboard(input) {
           currentInput = input;
           keyboard.classList.add("is-open");
+
+          if (input.type === "email") {
+            currentLang = "en";
+          } else {
+            currentLang = "he";
+          }
+
           renderKeys();
           moveCaretToEnd(input);
         }
 
         function hideKeyboard() {
           keyboard.classList.remove("is-open");
+
+          if (currentInput.type === "email") {
+            currentLang = "he";
+          }
+
+          if (currentInput) currentInput.blur();
+
           currentInput = null;
         }
 

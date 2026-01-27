@@ -5,6 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/main.css" />
     <title>Enter Code</title>
+    <style>
+      .keyboard-container {
+        background-color: #ebedf2;
+        padding: 60px;
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(3, 1fr); /* first 3 rows */
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 100%;
+        z-index: 9999;
+
+        transform: translateY(100%);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transition:
+          transform 0.35s ease,
+          opacity 0.2s ease;
+      }
+      .keyboard-last-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+        gap: 16px;
+        grid-column: span 3; /* span 2 of the 4 columns */
+      }
+
+      /* visible state */
+      .keyboard-container.is-open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        bottom: 0;
+      }
+
+      .keyboard-container .data-number,
+      .keyboard-container .data-operationTashlum {
+        border: none;
+        background-color: white;
+        padding: 30px;
+        border-radius: 16px;
+        font-size: 50px;
+        font-weight: 600;
+        box-shadow: 0 3px 0 #898a8d;
+        transition: 0.1s ease-in-out;
+        cursor: pointer;
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .keyboard-container .data-number:active,
+      .keyboard-container .data-operationTashlum:active {
+        box-shadow: 0 1px 0 #898a8d;
+        transform: translateY(2px);
+      }
+
+      .keyboard-container .data-operationTashlum {
+        background-color: #ff9800;
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <div class="cloud-layer"></div>
@@ -115,12 +181,26 @@
         function showKeyboard(input) {
           currentInput = input;
           keyboard.classList.add("is-open");
+
+          if (input.type === "email") {
+            currentLang = "en";
+          } else {
+            currentLang = "he";
+          }
+
+          renderKeys();
           moveCaretToEnd(input);
         }
 
         function hideKeyboard() {
           keyboard.classList.remove("is-open");
+
+          if (currentInput.type === "email") {
+            currentLang = "he";
+          }
+
           if (currentInput) currentInput.blur();
+
           currentInput = null;
         }
 
@@ -158,72 +238,5 @@
         });
       })();
     </script>
-
-    <style>
-      .keyboard-container {
-        background-color: #ebedf2;
-        padding: 60px;
-        display: grid;
-        gap: 16px;
-        grid-template-columns: repeat(3, 1fr); /* first 3 rows */
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 100%;
-        z-index: 9999;
-
-        transform: translateY(100%);
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-
-        transition:
-          transform 0.35s ease,
-          opacity 0.2s ease;
-      }
-      .keyboard-last-row {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-        gap: 16px;
-        grid-column: span 3; /* span 2 of the 4 columns */
-      }
-
-      /* visible state */
-      .keyboard-container.is-open {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-        bottom: 0;
-      }
-
-      .keyboard-container .data-number,
-      .keyboard-container .data-operationTashlum {
-        border: none;
-        background-color: white;
-        padding: 30px;
-        border-radius: 16px;
-        font-size: 50px;
-        font-weight: 600;
-        box-shadow: 0 3px 0 #898a8d;
-        transition: 0.1s ease-in-out;
-        cursor: pointer;
-        min-height: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .keyboard-container .data-number:active,
-      .keyboard-container .data-operationTashlum:active {
-        box-shadow: 0 1px 0 #898a8d;
-        transform: translateY(2px);
-      }
-
-      .keyboard-container .data-operationTashlum {
-        background-color: #ff9800;
-        color: white;
-      }
-    </style>
   </body>
 </html>
