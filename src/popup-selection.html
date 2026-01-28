@@ -1,18 +1,16 @@
 <!doctype html>
-<html lang="en" dir="rtl">
+<html lang="he" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/main.css" />
-    <title>Popup selection</title>
+    <title>Popup Selection</title>
   </head>
   <body>
-    <div class="cloud-layer"></div>
-
     <div class="main customers">
       <div class="w-full flex flex-col justify-center items-center">
         <div class="app-logo"></div>
-        <div class="steps-group step-2">
+        <div class="steps-group step-1">
           <div class="step-item">
             <div class="step-item-number">01</div>
             <div class="step-item-title">מילוי פרטים</div>
@@ -31,11 +29,12 @@
           </div>
         </div>
       </div>
-
+      <h2 class="text-6xl">בחירת המשתתפים</h2>
       <div class="content-container">
-        <p class="text-xl text-white text-start">מזהה לקוח: 0238230</p>
-        <div class="text-with-tick text-md flex items-center flex-row-reverse">
-          אישור קפיצה בתוקף
+        <p class="text-xl text-white text-start text-medium">
+          מזהה לקוח: 0238230
+        </p>
+        <div class="text-with-tick mt-2 flex items-center flex-row-reverse">
           <svg
             width="34"
             height="34"
@@ -43,12 +42,13 @@
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <rect width="34" height="34" rx="17" fill="#FF9800" />
+            <rect width="34" height="34" rx="17" fill="#87B900" />
             <path
               d="M14.0002 21.1701L9.83016 17.0001L8.41016 18.4101L14.0002 24.0001L26.0002 12.0001L24.5902 10.5901L14.0002 21.1701Z"
               fill="white"
             />
           </svg>
+          אישור קפיצה בתוקף
         </div>
         <div dir="ltr">
           <div class="flex justify-between items-center">
@@ -69,15 +69,17 @@
                 </svg>
               </span>
             </button>
-            <h2 class="text-sm child-title">ילדים בחזקתי מתחת לגיל 18</h2>
+            <h2 class="text-sm text-white text-semibold">
+              בחרת להזמין כרטיס ל-שם הסניף
+            </h2>
           </div>
         </div>
       </div>
       <div class="content-container">
-        <p class="text-lg text-white text-start">
+        <h2 class="text-lg text-start text-white text-semibold">
           נא לבחור מי קופץ וללחוץ על המשך
-        </p>
-        <div class="check-item mt-5">
+        </h2>
+        <div class="check-item mt-32">
           <input type="checkbox" id="c1" class="check-input" />
           <label for="c1" class="check-box">
             <svg width="40" height="40" viewBox="0 0 40 40">
@@ -170,7 +172,7 @@
           חזרה
           <img
             class="relative z-10"
-            src="/assets/images/right-blue-arrow.png"
+            src="/assets/images/right-white-arrow.png"
             alt="left arrow"
           />
         </button>

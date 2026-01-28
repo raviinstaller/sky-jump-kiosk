@@ -101,23 +101,28 @@
 .orange-submit-btn:hover {
   opacity: 0.9;
 }
+
 .error_code,
 .success_code {
   position: relative !important;
 }
+
 .error_code input {
   border: 2px solid #ee1c1c !important;
-  color: #ee1c1c !important ;
+  color: #ee1c1c !important;
 }
+
 .error_code .error_text {
   position: absolute;
   color: red;
   left: 15px;
   bottom: 20px;
+  font-size: 20px;
   display: flex;
   align-items: center;
   gap: 5px;
 }
+
 .success_code .success_text {
   position: absolute;
   color: #013d6c;
@@ -127,6 +132,7 @@
   align-items: center;
   gap: 10px;
 }
+
 .order-summery-input {
   font-size: 20px !important;
   font-weight: 700;

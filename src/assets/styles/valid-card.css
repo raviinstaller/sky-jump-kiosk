@@ -11,9 +11,12 @@
     overflow-y: scroll;
 }
 
+.addon-table .summary-table {
+    padding: 0;
+}
+
 .addon-table {
     direction: rtl;
-    border-collapse: collapse;
     width: 100%;
 }
 

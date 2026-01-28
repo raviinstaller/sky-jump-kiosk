@@ -102,6 +102,7 @@
 .text-white {
   color: #ffffff;
 }
+
 .text-black {
   color: #000;
 }
@@ -210,6 +211,10 @@
   margin-top: 16px;
 }
 
+.mt-200 {
+  margin-top: 200px;
+}
+
 .w-32-percent {
   max-width: 32%;
 }
@@ -233,6 +238,7 @@
 .pb-30 {
   padding-bottom: 30px;
 }
+
 .pe-100 {
   padding-right: 100px;
 }
@@ -240,12 +246,15 @@
 .z-10 {
   z-index: 10;
 }
+
 .max-w-665 {
   max-width: 665px;
 }
+
 .max-w-400 {
   max-width: 400px;
 }
+
 .max-w-60-percent {
   max-width: 60%;
 }
@@ -257,6 +266,7 @@
 .max-w-180 {
   max-width: 180px;
 }
+
 .max-w-100 {
   max-width: 100px;
 }
@@ -269,9 +279,11 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 .mt-5 {
   margin-top: 20px;
 }
+
 .enter-code-desc {
   font-size: 32px;
   font-weight: 600;
@@ -279,6 +291,7 @@
   color: var(--color-text-primary);
   max-width: 700px;
 }
+
 .flex-grow-1 {
   flex-grow: 1;
 }

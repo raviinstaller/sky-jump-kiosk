@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="rtl">
+<html lang="he" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,9 +7,7 @@
     <title>Details form</title>
   </head>
   <body>
-    <div class="cloud-layer"></div>
-
-    <div class="main" style="padding-top: 0">
+    <div class="main">
       <div class="w-full flex flex-col justify-center items-center">
         <div class="app-logo"></div>
         <div class="steps-group step-1">
@@ -32,7 +30,7 @@
         </div>
       </div>
       <div>
-        <h2 class="text-6xl text-color-gradient">מילוי פרטי קופצים</h2>
+        <h2 class="text-6xl">מילוי פרטי קופצים</h2>
         <p class="text-lg mt-3 text-center text-semibold font-assistant">
           יש למלא את פרטי המבוגר / ההורה:
         </p>
@@ -85,19 +83,43 @@
             />
           </div>
           <div class="input-group">
-            <label for="city">עיר</label>
-            <div class="custom-select" id="city">
-              <div class="custom-select-trigger">
-                <span class="selected-text">בחר סוג תעודה</span>
-              </div>
-              <div class="custom-select-options">
-                <div class="custom-select-option" data-value="tel-aviv">
-                  תל אביב
+            <label>עיר</label>
+
+            <div class="input-group">
+              <div class="custom-select-box" id="citySelect">
+                <div class="select-wrapper">
+                  <input
+                    type="text"
+                    class="custom-select-input keyboard-input"
+                    placeholder="בחר עיר"
+                    autocomplete="off"
+                  />
+                  <span class="select-icon">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.43359 4.45068C2.58354 4.45068 2.73201 4.48117 2.87012 4.53955C3.00785 4.59779 3.13301 4.68241 3.2373 4.78955L9.09961 10.7886L14.7793 5.11865C14.8849 5.01273 15.0109 4.92914 15.1494 4.87256C15.2882 4.81589 15.437 4.78773 15.5869 4.78955C15.7368 4.7914 15.8851 4.82325 16.0225 4.8833C16.1594 4.94322 16.2828 5.02983 16.3857 5.13818C16.5925 5.35594 16.7067 5.64656 16.7031 5.94678C16.6995 6.24685 16.5789 6.53388 16.3672 6.74658L16.3662 6.74756L9.88379 13.2212L9.88281 13.2202C9.77813 13.3252 9.65467 13.4097 9.51758 13.4663C9.37988 13.5231 9.23196 13.5512 9.08301 13.5503C8.93401 13.5494 8.78644 13.519 8.64941 13.4604C8.51285 13.4021 8.38961 13.317 8.28613 13.2104V13.2114L1.63086 6.39697L1.62891 6.39502C1.42113 6.17983 1.30469 5.89239 1.30469 5.59326C1.30476 5.29421 1.42117 5.00663 1.62891 4.7915L1.62988 4.79053C1.73425 4.68312 1.85914 4.59791 1.99707 4.53955C2.13514 4.48117 2.28369 4.45071 2.43359 4.45068Z"
+                        fill="#27A9E1"
+                        stroke="#27A9E1"
+                      />
+                    </svg>
+                  </span>
                 </div>
-                <div class="custom-select-option" data-value="jerusalem">
-                  ירושלים
+
+                <div class="custom-select-dropdown">
+                  <div class="custom-options">
+                    <div class="custom-option">תל אביב</div>
+                    <div class="custom-option">ירושלים</div>
+                    <div class="custom-option">חיפה</div>
+                    <div class="custom-option">באר שבע</div>
+                    <div class="custom-option">אשדוד</div>
+                  </div>
                 </div>
-                <div class="custom-select-option" data-value="haifa">חיפה</div>
               </div>
             </div>
           </div>
@@ -119,23 +141,30 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M12.8843 2.532C12.5383 1.878 11.4623 1.878 11.1163 2.532L2.11627 19.532C2.03556 19.6844 1.99564 19.8551 2.00038 20.0275C2.00512 20.1999 2.05437 20.3681 2.14333 20.5159C2.2323 20.6636 2.35796 20.7858 2.50812 20.8707C2.65827 20.9555 2.82781 21.0001 3.00027 21H21.0003C21.1727 21.0004 21.3423 20.956 21.4925 20.8713C21.6428 20.7866 21.7685 20.6644 21.8574 20.5167C21.9463 20.3689 21.9955 20.2006 22 20.0282C22.0045 19.8559 21.9643 19.6852 21.8833 19.533L12.8843 2.532ZM13.0003 18H11.0003V16H13.0003V18ZM11.0003 14V9H13.0003L13.0013 14H11.0003Z"
-                  fill="#FE9595"
+                  d="M12.884 2.52956C12.538 1.87556 11.462 1.87556 11.116 2.52956L2.11603 19.5296C2.03532 19.682 1.99539 19.8527 2.00013 20.0251C2.00488 20.1975 2.05412 20.3657 2.14309 20.5134C2.23205 20.6612 2.35772 20.7834 2.50787 20.8682C2.65803 20.9531 2.82757 20.9976 3.00003 20.9976H21C21.1725 20.9979 21.3421 20.9536 21.4923 20.8689C21.6425 20.7842 21.7682 20.662 21.8572 20.5142C21.9461 20.3665 21.9952 20.1982 21.9998 20.0258C22.0043 19.8534 21.9641 19.6828 21.883 19.5306L12.884 2.52956ZM13 17.9976H11V15.9976H13V17.9976ZM11 13.9976V8.99756H13L13.001 13.9976H11Z"
+                  fill="#E00000"
                 />
               </svg>
+
               שגיאה
             </p>
           </div>
         </div>
         <div class="form-row flex-row-reverse items-end">
-          <div dir="ltr">
+          <div dir="ltr" class="">
             <p class="details-feeling-desc">
               אישור קבלת דיוור שיווקי (מבטיחים לא להציק 😉)
             </p>
-            <p class="details-feeling-desc flex items-center gap-15 mt-4">
+            <p class="details-feeling-desc mt-4">
               כן, שלחו לי הטבות ומבצעים שווים ב-SMS ודוא"ל
-              <input type="checkbox" id="c4" class="check-input" />
-              <label for="c4" class="check-box">
+            </p>
+          </div>
+          <div class="input-group">
+            <label>תאריך לידה הורה</label>
+            <div class="flex gap-20">
+              <input dir="rtl" type="tel" class="keyboard-input" />
+              <input type="checkbox" id="c1" class="check-input" />
+              <label for="c1" class="check-box">
                 <svg width="40" height="40" viewBox="0 0 40 40">
                   <rect
                     class="box-bg"
@@ -151,16 +180,12 @@
                   />
                 </svg>
               </label>
-            </p>
-          </div>
-          <div class="input-group">
-            <label>תאריך לידה הורה</label>
-            <input dir="rtl" type="tel" class="keyboard-input" />
+            </div>
           </div>
         </div>
       </form>
       <div dir="ltr" class="form-card content-container child-card mt-20">
-        <div class="child-header">
+        <div class="child-header mb-0">
           <button type="button" class="add-child-btn">
             הוספת ילד
             <span
@@ -190,8 +215,7 @@
           </button>
           <h2 class="child-title">ילדים בחזקתי מתחת לגיל 18</h2>
         </div>
-
-        <div class="scrollbar_details_form">
+        <div class="rows-scroll-wrapper">
           <div class="form-row items-end">
             <div class="delete-col">
               <button type="button" class="delete-btn">
@@ -202,9 +226,9 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect width="48" height="48" rx="24" fill="#FF9800" />
+                  <rect width="48" height="48" rx="24" fill="#F2702F" />
                   <path
-                    d="M15.1577 35.3684V16.4211H13.8945V13.8947H20.2103V12.6316H27.7893V13.8947H34.1051V16.4211H32.8419V35.3684H15.1577ZM17.684 32.8421H30.3156V16.4211H17.684V32.8421ZM20.2103 30.3158H22.7366V18.9474H20.2103V30.3158ZM25.263 30.3158H27.7893V18.9474H25.263V30.3158Z"
+                    d="M15.1616 35.3677V16.4203H13.8984V13.894H20.2142V12.6309H27.7932V13.894H34.109V16.4203H32.8458V35.3677H15.1616ZM17.6879 32.8414H30.3195V16.4203H17.6879V32.8414ZM20.2142 30.3151H22.7405V18.9466H20.2142V30.3151ZM25.2669 30.3151H27.7932V18.9466H25.2669V30.3151Z"
                     fill="white"
                   />
                 </svg>
@@ -239,9 +263,9 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect width="48" height="48" rx="24" fill="#FF9800" />
+                  <rect width="48" height="48" rx="24" fill="#F2702F" />
                   <path
-                    d="M15.1577 35.3684V16.4211H13.8945V13.8947H20.2103V12.6316H27.7893V13.8947H34.1051V16.4211H32.8419V35.3684H15.1577ZM17.684 32.8421H30.3156V16.4211H17.684V32.8421ZM20.2103 30.3158H22.7366V18.9474H20.2103V30.3158ZM25.263 30.3158H27.7893V18.9474H25.263V30.3158Z"
+                    d="M15.1616 35.3677V16.4203H13.8984V13.894H20.2142V12.6309H27.7932V13.894H34.109V16.4203H32.8458V35.3677H15.1616ZM17.6879 32.8414H30.3195V16.4203H17.6879V32.8414ZM20.2142 30.3151H22.7405V18.9466H20.2142V30.3151ZM25.2669 30.3151H27.7932V18.9466H25.2669V30.3151Z"
                     fill="white"
                   />
                 </svg>
@@ -277,12 +301,13 @@
           חזרה
           <img
             class="relative z-10"
-            src="/assets/images/right-blue-arrow.png"
+            src="/assets/images/right-white-arrow.png"
             alt="left arrow"
           />
         </button>
       </div>
     </div>
+
     <!-- ================= CUSTOM KEYBOARD ================= -->
     <div class="keyboard-text-container">
       <button class="close-btn" onclick="submitOk()">✕</button>
@@ -353,7 +378,6 @@
         <button class="data-number data-ok" onclick="submitOk()">שמירה</button>
       </div>
     </div>
-
     <!-- ================= SCRIPT ================= -->
     <script>
       (function () {
@@ -452,32 +476,52 @@
           input.addEventListener("click", () => showKeyboard(input));
         });
       })();
+    </script>
+    <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const select = document.getElementById("city");
-        const trigger = select.querySelector(".custom-select-trigger");
-        const options = select.querySelectorAll(".custom-select-option");
-        const selectedText = select.querySelector(".selected-text");
+        const selectBox = document.getElementById("citySelect");
+        const input = selectBox.querySelector(".custom-select-input");
+        const options = selectBox.querySelectorAll(".custom-option");
 
-        // open close dropdown
-        trigger.addEventListener("click", () => {
-          select.classList.toggle("open");
+        input.addEventListener("focus", () => {
+          selectBox.classList.add("active");
+          filterOptions("");
         });
 
-        // option click
+        input.addEventListener("input", () => {
+          selectBox.classList.add("active");
+          filterOptions(input.value);
+        });
+
         options.forEach((option) => {
           option.addEventListener("click", () => {
-            options.forEach((o) => o.classList.remove("selected"));
+            options.forEach((removeItem) =>
+              removeItem.classList.remove("selected"),
+            );
+
             option.classList.add("selected");
 
-            selectedText.textContent = option.textContent;
-            select.classList.remove("open");
+            input.value = option.textContent;
+
+            selectBox.classList.remove("active");
           });
         });
 
-        // close when clicking outside
+        function filterOptions(value) {
+          const search = value.toLowerCase();
+
+          options.forEach((option) => {
+            if (option.textContent.toLowerCase().includes(search)) {
+              option.style.display = "block";
+            } else {
+              option.style.display = "none";
+            }
+          });
+        }
+
         document.addEventListener("click", (e) => {
-          if (!select.contains(e.target)) {
-            select.classList.remove("open");
+          if (!selectBox.contains(e.target)) {
+            selectBox.classList.remove("active");
           }
         });
       });
